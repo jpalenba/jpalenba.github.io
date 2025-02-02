@@ -1,0 +1,36 @@
+body {
+    background-color: lightcyan;
+    text-align: center;
+    color: purple;
+    font-family: monospace;
+}
+
+a {
+    color: mediumblue;
+    text-decoration: dashed;
+}
+
+a:hover {
+    color: darkslategrey;
+    text-decoration: line-through;
+}
+
+main {
+    text-align: left;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+figure{
+    text-align: center;
+    font-style: oblique;
+}
+
