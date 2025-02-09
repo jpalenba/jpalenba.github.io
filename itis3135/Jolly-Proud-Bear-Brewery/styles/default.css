@@ -1,0 +1,70 @@
+body {
+    background-color: #d7be82;
+    text-align: center;
+    color: #7a4419;
+    font-family: monospace;
+}
+
+a {
+    color: #400406;
+    text-decoration: dashed;
+}
+
+a:hover {
+    color: #515a47;
+    text-decoration: underline;
+}
+
+main {
+    text-align: left;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+h2 {
+    text-align: center;
+    
+}
+
+h3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+        
+}
+
+h4{
+    text-align: center;
+    padding: 10px;
+    color: #400406;
+}
+
+p{
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+figure{
+    text-align: center;
+    font-style: oblique;
+}
+
+.validator-icon {
+    border: 0;
+    width: 88px;
+    height: 31px;
+  }
+
+nav a{
+    font-size: large;
+    
+}
+
+footer {
+    background-color: #B7A375;
+    padding: 10px;
+}
