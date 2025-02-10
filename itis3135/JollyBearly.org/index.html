@@ -10,9 +10,98 @@
             color: red;
             background-color: bisque;
         }
+
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        header img{
+            width: 250px;
+            margin-right: 3rem;
+        }
+
+        h1 {
+            font: bold;
+        }
+
+        h2 {
+        display: block;
+        margin-block-start: -0.35em;
+        margin-inline-start: 25px;
+        }
+
+        p {
+            text-align: justify;
+            margin-block-start: -0.35em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 25px;
+        }
+        .custom-list {
+        list-style: none;
+        }
+
+        .custom-list li {
+        padding-left: 30px;
+        margin-bottom: 10px;
+        }
+
+        .custom-list li::before {
+        content: "◆";  
+        color: red; 
+        font-size: 15px;
+        margin: 10px;
+        }
+
+        footer {
+            padding: 2.2rem;
+            text-align: center;
+        }
+
+        footer p{
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
-    <p> This is the design page of JollyBearly &copy; 2025</p>
+    <header>
+        <img src="images/logo_image.png" alt="Logo">
+        <h1>Jolly Bearly Studio</h1>
+    </header>
+    <main>
+        <h2>Jolly Bearly Studio’s services</h2>
+        <p>
+            At Jolly Bearly Studio, we specialize in crafting stunning websites that don’t just look good they work flawlessly. Whether you're looking for a sleek business website, a powerful e-commerce platform, or a dynamic web application, we bring creativity and technical expertise together to make it happen.
+            We believe that a website should be more than just an online presence it should be a powerful tool that engages visitors, boosts your brand, and drives real results.
+        </p>
+        <ul class = "custom-list">
+            <li>Custom-Built Solutions</li>            
+            <li>Mobile-First &amp; Responsive Design</li>
+            <li>SEO-Optimized for Visibility</li>
+            <li>Full-Service Web Development</li>
+            <li>User-Centered Design</li>
+            <li>Secure &amp; Reliable</li>
+        </ul>
+        <p>
+            From front-end design to back-end development, we handle everything to bring your digital vision to life. At Jolly Bearly Studio, we don’t just build websites we build experiences.
+            Let’s create something amazing together! Contact us today to get started.
+        </p>
+    </main>
+    <footer>
+        <p>© 2025</p>
+        <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
+            <img class="validator-icon"
+                 src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+          </a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
+            <img class="validator-icon"
+                 src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+          </a>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
 </body>
 </html>
