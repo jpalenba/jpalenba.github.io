@@ -18,6 +18,7 @@
 
         header img{
             width: 250px;
+            height: 250px;
             margin-right: 3rem;
         }
 
@@ -26,31 +27,32 @@
         }
 
         h2 {
-        display: block;
-        margin-block-start: -0.35em;
-        margin-inline-start: 25px;
+            display: block;
+            margin-top: -0.35em;
+            margin-left: 25px;
+
         }
 
         p {
             text-align: justify;
-            margin-block-start: -0.35em;
-            margin-block-end: 0.83em;
-            margin-inline-start: 25px;
+            margin-top: -0.35em;
+            margin-bottom: 0.83em;
+            margin-left: 25px;
         }
         .custom-list {
-        list-style: none;
+            list-style: none;
         }
 
         .custom-list li {
-        padding-left: 30px;
-        margin-bottom: 10px;
+            padding-left: 30px;
+            margin-bottom: 10px;
         }
 
         .custom-list li::before {
-        content: "◆";  
-        color: red; 
-        font-size: 15px;
-        margin: 10px;
+            content: "◆";  
+            color: red; 
+            font-size: 15px;
+            margin: 10px;
         }
 
         footer {
@@ -64,6 +66,12 @@
 
         footer a{
             align-items: center;
+            color: red;
+        }
+
+        footer a:hover {
+            color: blue;
+            text-decoration: underline;
         }
 
         .contact-block {
@@ -108,7 +116,7 @@
     </main>
     <footer>
         <div class = "contact-block">
-        <p>jollybearly@gmail.com <br>704-777-5143 <br> Located in the happiest place in the world</p>
+        <p>jollybearly@gmail.com <br>704-777-5143 <br> Located in the happiest place in the world<br> <a href="https://www.freecodecamp.org/certification/jpalenba/responsive-web-design"><i>Certified in Responsive Web Design</i> </a></p>
         </div>
         <p>© 2025</p>
         <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
