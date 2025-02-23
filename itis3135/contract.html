@@ -9,16 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Jose Palen's Jolly Proud Bear || ITIS 3135</h1>
-        <nav>
-            <a href="./">Home</a>
-            |
-            <a href="introduction.html">Introduction</a>
-            |
-            <a href="contract.html">Contact</a>
-            |
-            <a href="Jolly-Proud-Bear-Brewery/index.html">Jolly Proud Bear Brewery</a>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
     <main>
         <h2>Contract</h2>
@@ -33,32 +24,12 @@
             Signed: Jose A. Palen Baez , 2/2/2025 </h3>
     </main>
     <footer>
-        <a href="https://webpages.charlotte.edu/jpalenba/">Charlotte.edu</a>
-        |
-        <a href="https://github.com/jpalenba/jpalenba.github.io">Github</a>
-        |
-        <a href="https://jpalenba.github.io/itis3135/contract.html">Github.io</a>
-        |
-        <a href="https://www.freecodecamp.org/jpalenba">freeCodeCamp</a>
-        |
-        <a href="https://www.codecademy.com/learn">Codeacademy</a>
-        |
-        <a href="https://www.linkedin.com/in/jose-palen-baez-2383a432a/">linkedin</a>
-
-        <p>Page Built by <a href="JollyBearly.org">Jolly Proud Enterprises, </a><a href="https://www.freecodecamp.org/certification/jpalenba/responsive-web-design"><i>Certified in Responsive Web Design</i></a> &copy; 2025 </p>
-
-        <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
-            <img class="validator-icon"
-                 src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-          </a>
-          <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
-            <img class="validator-icon"
-                 src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-          </a>
+        <div data-include="components/footer.html"></div>
     </footer>
     <script>
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
       </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
