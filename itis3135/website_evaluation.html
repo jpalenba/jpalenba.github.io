@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Palen's Web Evaluation</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2 id ="evaluation">Website Evaluation</h2>
+        <div id="websites">
+            <section class="websites" id="bad-website">
+                <h3 id="web-title">
+                    <a href="https://arngren.net/">Arngren</a>
+                </h3>
+                <p>Arngren Electronics is a company that sells electronics, gadgets and post office mail items. Arngren's website is often cited as an example of poor web design due to its disregard for the CRAP principles:</p>
+                <ul>
+                    <li>Contrast: The site employs a chaotic mix of colors and backgrounds, leading to visual confusion and difficulty in distinguishing between different sections.</li>
+                    <li>Repetition: There is a lack of consistent styling; various fonts, colors, and design elements are used haphazardly, resulting in a disjointed appearance.</li>
+                    <li>Alignment: The layout appears cluttered, with images and text placed arbitrarily without a clear alignment, making navigation cumbersome.</li>
+                    <li>Proximity: Unrelated items are crammed together, and related content is scattered, forcing users to sift through overwhelming information to locate what they need.</li>
+                </ul>
+                <p>The site’s chaotic mix of colors, inconsistent fonts, and misaligned elements create visual confusion and clutter. Poor proximity between related content forces users to search through scattered information, making navigation difficult and overwhelming.</p>
+            </section>
+            <section class="websites" id="good-website">
+                <h3>
+                    <a href="https://www.apple.com/">Apple</a>
+                </h3>
+                <p>Apple Inc. is an American multinational technology company headquartered in Cupertino, California, in Silicon Valley. Apple's official website is renowned for its clean and intuitive design, effectively implementing the CRAP principles:</p>
+                <ul>
+                    <li>Contrast: Apple uses a minimalist color palette with ample white space, allowing product images and key messages to stand out prominently.</li>
+                    <li>Repetition: Consistent use of fonts, colors, and design elements across all pages reinforces brand identity and provides a cohesive user experience.</li>
+                    <li>Alignment: The website features a well-structured grid layout, ensuring that text, images, and buttons are perfectly aligned, which enhances readability and aesthetics.</li>
+                    <li>Proximity: Related information and products are grouped together logically, making it easy for users to find relevant content without unnecessary searching.</li>
+                </ul>
+                <p>Apple's website uses a minimalist color palette and ample white space, making key content stand out. Consistent fonts and design elements create a cohesive experience, while a structured grid layout enhances readability. Related information is logically grouped, ensuring easy navigation.
+                </p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
+      <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

@@ -12,7 +12,7 @@ a {
 
 a:hover {
     color: #5D5179;
-    text-decoration: line-through;
+    text-decoration: underline;
 }
 
 main {
@@ -49,4 +49,24 @@ figure{
     border: 0;
     width: 88px;
     height: 31px;
-  }
+}
+
+/*Website_evaluation*/
+#evaluation{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+
+#websites{
+   text-align:center; 
+}
+
+h3 a {
+    font-size: x-large;
+    color: #5D5179;
+    font-style: bold;
+}
+
+section p{
+    text-align: justify;
+}

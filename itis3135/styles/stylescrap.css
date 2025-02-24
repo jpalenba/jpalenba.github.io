@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'ComicSansLight';
+    src: url('/itis3135/stuff/Ldfcomicsanslight-6dZo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Papyrus';
+    src: url('/itis3135/stuff/PapyrusFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comic papyrus';
+    src: url('/itis3135/stuff/ComicPapyrus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
