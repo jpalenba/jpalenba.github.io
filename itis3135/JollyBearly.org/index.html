@@ -6,87 +6,122 @@
     <title>JollyBearly Design Page</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        body {
-            color: red;
-            background-color: bisque;
-        }
+body {
+    color: red;
+    background-color: bisque;
+}
 
-        header {
-            display: flex;
-            align-items: center;
-        }
+main {
+    max-width: 1200px;     
+    width: 90%;            
+    margin: 0 auto;        
+}
 
-        header img{
-            width: 250px;
-            height: 250px;
-            margin-right: 3rem;
-        }
+header {
+    display: flex;
+    align-items: center;
+}
 
-        h1 {
-            font: bold;
-        }
+header img {
+    width: 250px;
+    height: 250px;
+    margin-right: 3rem;
+}
 
-        h2 {
-            display: block;
-            margin-top: -0.35em;
-            margin-left: 25px;
+h1 {
+    font-weight: bold;
+}
 
-        }
+h2 {
+    display: block;
+    margin-top: -0.35em;
+    margin-left: 25px;
+}
 
-        p {
-            text-align: justify;
-            margin-top: -0.35em;
-            margin-bottom: 0.83em;
-            margin-left: 25px;
-        }
-        .custom-list {
-            list-style: none;
-        }
+p {
+    text-align: justify;
+    margin-top: -0.35em;
+    margin-bottom: 0.83em;
+    margin-left: 25px;
+}
 
-        .custom-list li {
-            padding-left: 30px;
-            margin-bottom: 10px;
-        }
+.custom-list {
+    list-style: none;
+}
 
-        .custom-list li::before {
-            content: "◆";  
-            color: red; 
-            font-size: 15px;
-            margin: 10px;
-        }
+.custom-list li {
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
 
-        footer {
-            padding: 2.2rem;
-            text-align: center;
-        }
+.custom-list li::before {
+    content: "◆";  
+    color: red; 
+    font-size: 15px;
+    margin: 10px;
+}
 
-        footer p{
-            text-align: center;
-        }
+footer {
+    padding: 2.2rem;
+    text-align: center;
+}
 
-        footer a{
-            align-items: center;
-            color: red;
-        }
+footer p {
+    text-align: center;
+}
 
-        footer a:hover {
-            color: blue;
-            text-decoration: underline;
-        }
+footer a {
+    align-items: center;
+    color: red;
+}
 
-        .contact-block {
-            margin: 10px auto ;
-            padding: 20px;
-            padding-bottom: 10px;
-            background: white;
-            color: red;
-            text-align: center;
-            border-radius: 10px;
-            border: 2px solid red;
-            font-size: 15px;
-            font-weight: bold;
-            max-width: 300px;
-        }
+footer a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.contact-block {
+    margin: 10px auto;
+    padding: 20px;
+    padding-bottom: 10px;
+    background: white;
+    color: red;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid red;
+    font-size: 15px;
+    font-weight: bold;
+    max-width: 300px;
+}
+
+
+@media screen and (max-width: 600px) {    body {
+        font-size: 16px;
+    }
+
+    header img {
+        width: 120px;
+        height: 120px;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+
+    header img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    body {
+        font-size: 18px;
+    }
+}
 
     </style>
 </head>

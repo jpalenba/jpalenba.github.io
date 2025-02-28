@@ -7,71 +7,103 @@
 	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
 	<style>
-	body {
-		background-color: #899064;
-		text-align: center;
-	}
+body {
+    background-color: #899064;
+    text-align: center;
+}
 
-	p {
-		text-align: center;
-		font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		font-size: x-large;
-		color: #005035;
-	}
 
-	.line {
-	  width: auto; 
-      height: 170px; 
-      background-color: #A49665; 
-      margin: 20px auto;
-	}
+main {
+    max-width: 1200px;  
+    width: 90%;         
+    margin: 0 auto;     
+}
 
-	.logo{
-		display: block;
-		margin: 0 auto;
-		width: 150px;
-	}
-	
-	h1{
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		color: #F1E6B2;
-		text-align: center;
-	}
-	
-	footer a{
-		text-align: center;
-		color:#005035		
-	}
+p {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    color: #005035;
+}
 
-	footer a:hover{
-		color: white;
-		text-decoration: line-through;
-	}
-	
-	nav{
-		text-align: center;
-	}
+.line {
+    width: auto;
+    height: 170px;
+    background-color: #A49665;
+    margin: 20px auto;
+}
 
-	nav a{
-	  display: inline-block; 
-      padding: 10px 20px; 
-      border: 2px solid #000; 
-      border-radius: 5px; 
-      background-color: #F1E6B2; 
-      color: black; 
-      text-decoration: none; 
-      font-size: 16px; 
-      margin: 10px;
-	}
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
 
-	nav a:hover {
-      background-color: #005035; 
-      color: white; 
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #F1E6B2;
+    text-align: center;
+}
+
+footer a {
+    text-align: center;
+    color: #005035;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: line-through;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #F1E6B2;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px;
+}
+
+nav a:hover {
+    background-color: #005035;
+    color: white;
+}
+
+img {
+    width: 15%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 16px; 
     }
+    
+    img {
+        width: 50%; 
+    }
+}
 
-	img{
-		width: 15%;
-	}
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    body {
+        font-size: 18px; 
+    }
+}
+
+@media screen and (min-width: 993px) {
+    body {
+        font-size: 18px; 
+    }
+}
+
 
 	</style>
 </head>

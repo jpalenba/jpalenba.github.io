@@ -15,40 +15,40 @@ a:hover {
     text-decoration: underline;
 }
 
+
 main {
+    max-width: 1200px;     
+    width: 90%;            
+    margin: 0 auto;       
     text-align: left;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 
 h2 {
     text-align: center;
-    
 }
 
-h3{
+h3 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 1em;
-        
 }
 
-h4{
+h4 {
     text-align: center;
     padding: 10px;
     color: #400406;
 }
 
-p{
+p {
     text-align: center;
 }
 
 img {
-    width: 100%;
+    width: 100%; 
 }
 
-figure{
+figure {
     text-align: center;
     font-style: oblique;
 }
@@ -57,14 +57,33 @@ figure{
     border: 0;
     width: 88px;
     height: 31px;
-  }
+}
 
-nav a{
+nav a {
     font-size: large;
-    
 }
 
 footer {
     background-color: #B7A375;
     padding: 10px;
 }
+
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  body {
+    font-size: 18px;
+  }
+}
+ 

@@ -16,36 +16,34 @@ a:hover {
 }
 
 main {
+    max-width: 1200px;      
+    width: 90%;            
+    margin: 0 auto;        
     text-align: left;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 
-h1 {
-    text-align: center;
-    
-}
+h1,
 h2 {
     text-align: center;
-    
 }
 
-h3{
+h3 {
     font-style: italic;
     text-align: center;
 }
 
-p{
+p {
     text-align: center;
     font-style: italic;
 }
 
 img {
+    
     width: 316px;
     height: 412px;
 }
 
-figure{
+figure {
     text-align: center;
     font-style: oblique;
 }
@@ -56,22 +54,50 @@ figure{
     height: 31px;
 }
 
-/*Website_evaluation*/
-#evaluation{
+#evaluation {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
 }
 
-#websites{
+#websites {
    text-align:center; 
 }
 
 h3 a {
     font-size: x-large;
     color: #5D5179;
-    font-style: bold;
+    font-weight: bold; 
 }
 
-section p{
+section p {
     text-align: justify;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        width: 95%; 
+    }
+}
+
+@media screen and (min-width: 993px) {
+    body {
+        font-size: 18px;
+    }
 }
