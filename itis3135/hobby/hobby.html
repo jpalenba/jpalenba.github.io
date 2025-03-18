@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobby</title>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #363946, #363946, #363946, #363946, #696773);
+      background-attachment: fixed;
+      font-family: 'Open Sans', sans-serif;
+    }
+    @keyframes rainbow {
+      0% { background-color: #ff0000; } 
+      16% { background-color: #ff7f00; } 
+      32% { background-color: #ffff00; } 
+      48% { background-color: #00ff00; } 
+      64% { background-color: #0000ff; } 
+      80% { background-color: #4b0082; }
+      100% { background-color: #9400d3; } 
+    }
+    nav {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      gap: 15px; 
+      flex-wrap: wrap; 
+    }
+    nav button {
+      background: transparent;
+      border: none;
+      font-size: 20.5px;
+      transition: all 0.3s ease-in-out;
+    }
+    nav button:hover {
+      animation: rainbow 1s linear infinite;
+      color: white; 
+      border-radius: 5px;
+    }
+    .section {
+      display: none;
+      padding: 50px;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      background: rgba(72, 75, 81, 0.8);
+      border-radius: 8px; 
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    img {
+      width: 250px; 
+      height: auto;
+    }
+    .wrapper {
+      max-width: 1000px;       
+      margin: 0 auto;        
+      padding: 0 20px;       
+    }
+    p, li, td {
+      text-align: center;   
+    }
+    h4, h5, nav button, figcaption {
+      text-align: center;
+    }
+    th {
+      text-align: center;
+    }
+    figure {
+      text-align: center;    
+    }
+    figure img {
+      margin: 0 auto;       
+      display: block;
+    }
+    .why-table {
+      max-width: 600px;                 
+      margin: 0 auto;                       
+      width: 100%;              
+      text-align: justify;      
+    }
+    #what {
+      display: block;
+    }
+    #funfact-img-container {
+      display: flex;
+      align-items: flex-start; 
+      gap: 20px;              
+      margin: 20px 0;         
+    }
+    /* Moved the heading for fun facts outside of the list */
+    #fun-facts {
+      max-width: 600px;       
+      margin: 0 auto;
+    }
+    #why-img-container {
+      display: flex;
+      justify-content: center;  
+      gap: 20px;                
+      margin-top: 20px;        
+    }
+    #why-img-container img {
+      max-width: 250px;  
+      height: auto;
+      display: block;     
+      margin: 0 auto;     
+    }
+    #why-img-container figcaption {
+      text-align: center;
+    }
+    .why-cont {
+      text-align: center;  
+      margin-top: 20px;    
+    }
+
+    #best-time- {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
+    }
+
+    #best-time- img, 
+    #best-time-last img {
+      max-width: 220px; 
+      height: auto;
+      display: block;
+    }
+    #best-time-last {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .best-time-list {
+      list-style-type: none; 
+      padding: 0;
+      text-align: center; 
+      font-size: 18px;
+      max-width: 600px; 
+      margin: 0 auto; 
+    }
+    .best-times-cont {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .how-flex-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;               
+      gap: 20px;                 
+      flex-wrap: wrap;                 
+      max-width: 900px;            
+      margin: 20px auto;         
+    }
+    .how-flex-container figure,
+    .how-flex-container .how-text {
+      flex: 1;
+      min-width: 300px;      
+    }
+    .how-text-center {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 40px;       
+    }
+    .about-cont {
+      text-align: center;
+      color: #B1B6A6;
+    }
+    .about-images {
+      display: flex;
+      justify-content: center; 
+      align-items: center;    
+      gap: 20px;                        
+      margin-top: 20px;
+    }
+    .about-images figure {
+      text-align: center;
+    }
+    .about-images img {
+      max-width: 200px;
+      height: auto;
+      display: block;
+    }
+    .where-table {
+      max-width: 700px;  
+      margin: 0 auto;    
+      width: 100%;       
+      border-collapse: collapse; 
+    }
+    .where-table img {
+      max-width: 180px;  
+      height: auto;
+    }
+    h2, h3 {
+      color: #B1B6A6;
+      text-align: center;
+    }
+    p, li, td, th, figcaption {
+      color: #B1B6A6;
+    }
+    nav button {
+      color: #B1B6A6;
+    }
+    .ai-prompt-cont {
+      color: #B1B6A6;
+    }
+    h1 {
+      color: #939A84;
+      text-align: center;
+    }
+    footer p {
+      color: #939A84;
+      text-align: center;
+    }
+    footer a {
+      color: #939A84;
+      text-decoration: none; 
+    }
+    footer a:hover {
+      text-decoration: underline; 
+    }
+    .validator-icon {
+      max-width: 80px; 
+      height: auto;
+    }
+    .validation-container {
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      gap: 10px; 
+      margin-top: 5px; 
+    }
+    .ai-prompt-container {
+      text-align: center;
+      font-size: 1.2em; 
+      margin: 0 auto;
+    }
+    .ai-prompt-container ul {
+      list-style: none;
+      padding: 0;
+    }
+    .ai-prompt-container li {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .img-prompt {
+        margin-bottom: 20px;
+        flex: 1;
+    }
+    .fun-facts-column {
+        flex: 1;  
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Gaming</h1>
+      <nav>
+        <button class="nav-l" id="what-btn" data-section="what">What</button>
+        <h2 class="divider">🎮</h2>
+        <button class="nav-l" id="why-btn" data-section="why">Why</button>
+        <h2 class="divider">🎮</h2>
+        <button class="nav-l" id="best-times-btn" data-section="best-times">Best times</button>
+        <h2 class="divider">🎮</h2>
+        <button class="nav-l" id="how-btn" data-section="how">How</button>
+        <h2 class="divider">🎮</h2>
+        <button class="nav-l" id="where-btn" data-section="where">Where</button>
+        <h2 class="divider">🎮</h2>
+        <button class="nav-l" id="about-btn" data-section="about">About</button>
+        <h2 class="divider">🎮</h2>
+        <button class="nav-l" id="ai-prompts-btn" data-section="ai-prompts">AI prompts</button>
+      </nav>
+      <hr>
+    </header>
+    <main>
+        <section class="section" id="what">
+            <h2 class="section-title">What is gaming?</h2>
+            <p class="what-text">
+              The fine art of furiously pressing buttons,
+              yelling at screens, and convincing yourself that
+              "just one more game" won’t turn into an all-night
+              marathon. A highly competitive sport where you can defeat dragons,
+              build entire civilizations, or crash into a wall repeatedly—depending
+              on your skill level. Often accompanied by snacks, questionable sleep
+              schedules, and the occasional rage quit.
+            </p>
+          
+            <div id="funfact-img-container">
+              <div class="img-prompt">
+                <figure>
+                  <img src="images/gaming.jpg" alt="AI Generated">
+                  <figcaption>A showcase of the amount of stuff you could do gaming</figcaption>
+                </figure>
+                <p><em>AI-generated using the prompt: "could you make an image for what is gaming"</em></p>
+              </div>
+          
+              <div class="fun-facts-column">
+                <h3 class="what-cont">Fun Facts</h3>
+                <ul id="fun-facts">
+                  <li>
+                    The Best-Selling Game of All Time Isn’t What You Think.
+                    Minecraft holds the crown with over 300 million copies
+                    sold worldwide—beating out even classic giants like GTA
+                    V and Tetris. That’s a whole lot of pixelated creativity
+                    and accidental creeper explosions!
+                  </li>
+                  <li>
+                    Pac-Man Was Inspired by Pizza.
+                    When Pac-Man’s creator, Toru Iwatani, saw a pizza missing
+                    a slice, he got the idea for the iconic yellow character.
+                    So basically, gaming history was made thanks to snack time.
+                  </li>
+                  <li>
+                    The Longest Gaming Session Ever Lasted Over 35 Hours.
+                    A gamer set the record for the longest gaming marathon
+                    playing World of Warcraft for 35 hours and 35 minutes
+                    straight. That’s longer than an entire workweek… without
+                    a boss yelling at you!
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+      <section class="section" id="why" style="display:none;">
+        <h2 class="section-cont">Why should we game?</h2>
+        <table class="why-table">
+          <thead>
+            <tr>
+              <th>Reason Why Gaming is Great</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>It’s the best way to unwind. Some people meditate. Gamers aggressively click buttons and call it stress relief.</td>
+            </tr>
+            <tr>
+              <td>There’s always something new to explore. One day you’re saving the world, the next you’re just farming turnips. Both are equally valid.</td>
+            </tr>
+            <tr>
+              <td>You can do things you’d never survive in real life. Flying cars, sword fights, hacking into high-security networks—no consequences.</td>
+            </tr>
+            <tr>
+              <td>No weird social expectations. Nobody cares if you’re wearing pajamas and haven’t moved in hours—actually, that’s encouraged.</td>
+            </tr>
+            <tr>
+              <td>It’s the only place where failure is actually fun. Lose a fight? Just respawn and try again. Imagine if life worked that way.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="why-img-container">
+            <div class="img-prompt">
+          <figure>
+            <img src="images/whygame.jpg" alt="AI Generated">
+            <figcaption>The different things you could do in gaming</figcaption>
+          </figure>
+          <p><em>AI-generated "images for why should we game"</em></p>
+            </div>
+            <div class="img-prompt">
+          <figure>
+            <img src="images/lag.jpg" alt="AI Generated">
+            <figcaption>A really happy guy enjoying his game</figcaption>
+          </figure>
+          <p><em>AI-generated "image showcasing lag"</em></p>
+            </div>
+        </div>
+        <p class="why-cont">
+          At the end of the day, gaming is just a good time.
+          No over-the-top inspirational speeches needed.
+        </p>
+      </section>
+      <section class="section" id="best-times" style="display:none;">
+        <h2 class="section-cont">Best times to game.</h2>
+        <div id="best-time-">
+            <div class="img-prompt">
+          <figure>
+            <img src="images/5min.jpg" alt="AI Generated">
+            <figcaption>I mean, 5 more minutes wouldn’t hurt anybody, right?</figcaption>
+          </figure>
+          <p><em>AI-generated "Give me image of 5 more minutes"</em></p>
+            </div>
+            <div class="img-prompt">
+          <figure>
+            <img src="images/onemore.jpg" alt="AI Generated">
+            <figcaption>I mean, it’s just one more game. (We can only leave on a winstreak)</figcaption>
+          </figure>
+          <p><em>AI-generated "an image of just one more game"</em></p>
+            </div>
+            <div class="img-prompt">
+          <figure>
+            <img src="images/studybreak.jpg" alt="AI Generated">
+            <figcaption>That is the best way to release all the stress built up.</figcaption>
+          </figure>
+          <p><em>AI-generated "image of study break"</em></p>
+            </div>
+            <div class="img-prompt">
+          <figure>
+            <img src="images/sales.jpg" alt="AI Generated">
+            <figcaption>It's not like you will ever need that money.</figcaption>
+          </figure>
+          <p><em>AI-generated "image of games on sale"</em></p>
+            </div>
+        </div>
+        <ul class="best-time-list">
+          <li>When you have “just 5 minutes” – That somehow turns into 5 hours and a missed deadline.</li>
+          <li>Right before bed – Because nothing says "I need sleep" like "just one more round" at 3 AM.</li>
+          <li>During an important work/study break – Because obviously, a "quick match" is way more productive.</li>
+          <li>When the game is on sale – You won’t actually play it for months, but you HAD to buy it.</li>
+          <li>When you have actual responsibilities – Priorities? Nah. The world can wait.</li>
+        </ul>
+        <div id="best-time-last">
+            <div class="img-prompt">
+          <figure>
+            <img src="images/getoff.jpg" alt="AI Generated">
+            <figcaption>The best games ever on each single last game (20 last games).</figcaption>
+          </figure>
+          <p><em>AI-generated "image of next game we will get off"</em></p></div>
+        </div>
+        <p class="best-times-cont">
+          Moral of the story? There’s never a bad time to game—just bad excuses to stop.
+        </p>
+      </section>
+      <section class="section" id="how" style="display:none;">
+        <h2 class="section-cont">How to game like a Pro!?</h2>
+        <div class="how-flex-container">
+            <div class="img-prompt">
+          <figure>
+            <img src="images/pickyourpoison.jpg" alt="AI Generated">
+            <figcaption>PC is better. Fight me on it.</figcaption>
+          </figure>
+          <p><em>AI-generated "show me different platforms of gaming"</em></p></div>
+          <div class="how-text">
+            <h3 class="section-cont">Choose Your Poison</h3>
+            <ul>
+              <li>PC – Custom builds, RGB lights, and enough keybinds to confuse a NASA engineer.</li>
+              <li>Console – Sit back, relax, and button-mash your way to victory.</li>
+              <li>Mobile – For gaming on the go… or on the toilet, let’s be real.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="how-flex-container">
+            <div class="img-prompt">
+          <figure>
+            <img src="images/genre.jpg" alt="AI Generated">
+            <figcaption>And that is just the tip of the amount of genres out there.</figcaption>
+          </figure>
+          <p><em>AI-generated "show me genres of gaming"</em></p></div>
+          <div class="how-text">
+            <h3 class="section-cont">Pick Your Genre</h3>
+            <ul>
+              <li>FPS? 🔫 Get good or get roasted in the lobby.</li>
+              <li>RPG? 🛡️ Spend 30 minutes making your character, 3 minutes playing.</li>
+              <li>Strategy? 🧠 Outsmart everyone, or just spam buttons and hope for the best.</li>
+              <li>Battle Royale? 🎤 Where dropping in means dropping out (of first place).</li>
+            </ul>
+          </div>
+        </div>
+        <div class="how-flex-container">
+            <div class="img-prompt">
+          <figure>
+            <img src="images/Strugless.jpg" alt="AI Generated">
+            <figcaption>This is just a showcase of everyday things (Get used to it)</figcaption>
+          </figure>
+          <p><em>AI-generated "show me Struggles while gaming"</em></p></div>
+          <div class="how-text">
+            <h3 class="section-cont">Prepare for the Classic Struggles:</h3>
+            <ul>
+              <li>Lag at the worst time. You were totally winning before that, right?</li>
+              <li>Forgetting to save. Welcome back to square one.</li>
+              <li>One more game syndrome. It’s never just one more.</li>
+              <li>Accidentally skipping a cutscene. What’s the plot? Who knows.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="how-text-center">
+          <h3 class="section-cont">The Most Important Rule:</h3>
+          <ul>
+            <li>Have fun. Whether you’re grinding ranked, exploring open worlds, or just laughing at glitches, gaming is all about the experience.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section" id="where" style="display:none;">
+        <h2 class="where-cont">Places To Game</h2>
+        <table class="where-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Gaming Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <figure>
+                  <img src="images/arena.jpg" alt="Esports Arena">
+                  <figcaption>Where you can show a crowd your value in stage</figcaption>
+                </figure>
+                <p><em>AI-generated "places where you could play in multiple images"</em></p>
+              </td>
+              <td>Esports Arena - Competitive gaming on a grand stage with an audience.</td>
+            </tr>
+            <tr>
+              <td>
+                <figure>
+                  <img src="images/bedroom.jpg" alt="Bedroom Setup">
+                  <figcaption>Play in the comfiest way possible</figcaption>
+                </figure>
+                <p><em>AI-generated "places where you could play in multiple images"</em></p>
+              </td>
+              <td>Bedroom Setup - Cozy and immersive solo gaming experience.</td>
+            </tr>
+            <tr>
+              <td>
+                <figure>
+                  <img src="images/cafe.jpg" alt="Gaming Cafe">
+                  <figcaption>A great place to get to know people with your hobby also</figcaption>
+                </figure>
+                <p><em>AI-generated "places where you could play in multiple images"</em></p>
+              </td>
+              <td>Gaming Cafe - Social and competitive gaming with high-end setups.</td>
+            </tr>
+            <tr>
+              <td>
+                <figure>
+                  <img src="images/livingroom.jpg" alt="Living Room Gaming">
+                  <figcaption>Or here too i guess</figcaption>
+                </figure>
+                <p><em>AI-generated "places where you could play in multiple images"</em></p>
+              </td>
+              <td>Living Room - Relaxed console gaming with a big-screen experience.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="section" id="about" style="display:none;">
+        <h2 class="about-cont">About Me</h2>
+        <p class="about-cont">
+          Well, what can I say? I'm pretty much a chill guy.
+          Gaming has always been my go-to, whether it’s for 
+          relaxing after a long day or getting hyped over an 
+          intense match. I’m the type to appreciate everything 
+          from open-world exploration to competitive shooters—
+          sometimes sweating, sometimes just vibing. I enjoy 
+          discovering new games, mastering mechanics, and 
+          occasionally yelling at my screen (all in good fun,
+          of course). Whether it’s solo adventures, co-op missions, 
+          or online chaos, gaming is more than just a hobby—it’s a 
+          way to connect, challenge myself, and just have a good time.
+        </p>
+        <div class="about-images">
+          <figure>
+            <img src="images/me.jpg" alt="Picture of me">
+            <figcaption>Wasting my time out with some friends when I could grind some ranked matches</figcaption>
+          </figure>
+          <div class="img-prompt">
+          <figure>
+            <img src="images/chillguy.jpg" alt="Just chill guy">
+            <figcaption>I would be a chill guy but instead I'm here finishing my mid-term</figcaption>
+          </figure>
+          <p><em>AI-generated "image of the meme im a chill guy"</em></p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="ai-prompts" style="display:none;">
+        <h2 class="ai-prompt-cont">AI prompts</h2>
+        <div class="ai-prompt-container">
+          <ul>
+            <li>what is gaming? give me a funny definition</li>
+            <li>why should we game make it funny</li>
+            <li>tell me funny best times to game</li>
+            <li>tell how i can game</li>
+            <li>make this a table in html</li>
+            <li>is it possible to make a table with images?</li>
+            <li>I want you to create a JavaScript so that the text slowly disappears and then the content I clicked on reappears. To achieve this, I want you to follow the same logic as the current code; don't remove anything, just add new mechanisms to make this happen.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <hr>
+      <p>
+        Designed by 
+        <a class="org" href="JollyBearly.org">Jolly Proud Enterprises.</a>  ©2025
+      </p>
+      <div class="validation-container">
+        <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
+          <img class="validator-icon"
+               src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
+          <img class="validator-icon"
+               src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+        </a>
+      </div>
+    </footer>
+    <script>
+      function fadeOut(element, duration, callback) {
+        element.style.transition = "opacity " + duration + "ms ease-out";
+        element.style.opacity = 0;
+        setTimeout(() => {
+          element.style.display = "none";
+          if (callback) callback();
+        }, duration);
+      }
+      function fadeIn(element, duration) {
+        element.style.display = "block";
+        element.style.opacity = 0;
+        element.style.transition = "opacity " + duration + "ms ease-in";
+        void element.offsetWidth;
+        element.style.opacity = 1;
+      }
+      document.querySelectorAll('.nav-l').forEach((button) => {
+        button.addEventListener('click', function() {
+          let sectionId = this.getAttribute('data-section');
+          let currentSection = Array.from(document.querySelectorAll('.section'))
+                                .find((sec) => window.getComputedStyle(sec).display !== 'none');
+
+          if (currentSection) {
+            fadeOut(currentSection, 500, () => {
+              let newSection = document.getElementById(sectionId);
+              fadeIn(newSection, 500);
+            });
+          } else {
+            let newSection = document.getElementById(sectionId);
+            fadeIn(newSection, 500);
+          }
+        });
+      });
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+  </div>
+</body>
+</html>
