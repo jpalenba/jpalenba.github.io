@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Palen's Jolly Proud Bear || Project Overview    </title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Project Overview</h2>
+        <h3>Cut & play</h3>
+
+        <p>
+            The Cut & Play Salon website will offer a smooth 
+            and engaging experience for parents looking to book 
+            haircuts for their kids. The site will feature easy-
+            to-use buttons that allow users to schedule, reschedule, 
+            or cancel appointments at their convenience. A messaging 
+            option will be available to directly contact a hairdresser
+            for any specific questions or requests. To help parents prepare 
+            their little ones for a stress-free visit, the site will include 
+            helpful tips and service details. Visitors can also explore a fun 
+            gallery showcasing before-and-after photos of happy clients, along
+            with brief introductions to each hairdresser, helping kids feel more 
+            comfortable and familiar before their appointment.
+        </p>
+        <hr>
+
+        <h3>Client Information</h3>
+        <ul>
+            <li><strong>Name:</strong>Shaneli Bencosme</li>
+            <li><strong> The client is associated with: Cut & Play</strong> </li>
+            <li><strong>Email address:</strong>[Private]</li>
+            <li><strong>Phone Number:</strong>[Private]</li>
+        </ul>
+        <hr>
+
+        <h3>Wireframe of home page - dashboard</h3>
+        <div style="text-align: center;">
+        <a href="https://drive.google.com/file/d/1BNcz0xE1vNucgztEVreMzYMe8tn4AIGG/view?usp=sharing" >Link</a>
+        </div>
+
+        <figure class="Wireframe">
+            <img src="images/Wireframe.jpg" alt="Wireframe" width="1311" height="800">
+            <figcaption>Cut & Play Salon – Website Wireframe</figcaption>
+        </figure>
+
+        <hr>
+        <h3>Site map</h3>
+        <div style="text-align: center;">
+        <a href="https://drive.google.com/file/d/1fAcZ_IaPW-A-lJgX1hiXwv4Z70KzNahA/view?usp=sharing">Link</a>
+        </div>
+        <figure>
+            <img src="images/Sitemap.jpg" alt="Site Map">
+            <figcaption>Cut & Play Salon – Website Site map</figcaption>
+        </figure>
+        <hr>
+
+        <h3>Page-by-page Design</h3>
+        <ol>
+            <li><strong>Name:</strong>Home</li>
+            <li><strong>Purpose:</strong>Main landing page providing quick navigation to key features: Appointment bookings, About, Login, etc.</li>
+            <li><strong>Intended Users:</strong>All visitors.</li>
+            <li><strong>Content:</strong>Intro banner, highlights of services, quick links to dashboards once logged in.</li>
+            <li><strong>Data entry:</strong>None for anonymous users. Logged-in users may see personalized snippets.</li>
+            <li><strong>Data field validation:</strong>N/A</li>
+            <li><strong>Buttons/Hyperlinks/Dropdowns:</strong>Links to registration/login, about page, or direct booking.</li>
+            <li><strong>Actions:</strong>Users can explore the site or proceed to registration/login.</li>
+            <li><strong>Special notes:</strong>Should be visually appealing; consider a cheerful kid/family-friendly aesthetic.</li>
+        </ol>
+        <p>|||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+
+        <ol>
+            <li><strong>Name:</strong>Registration Page / Login Page</li>
+            <li><strong>Purpose:</strong>Allow parents (and potentially hairdressers) to create an account or log in.</li>
+            <li><strong>Intended Users:</strong>Parents/Clients and Hairdressers needing to access their dashboards.</li>
+            <li><strong>Content:</strong>Registration form asking for personal details (name, email, child info, password) and a login form with email + password fields.</li>
+            <li><strong>Data entry:</strong>User-provided registration details or login credentials.</li>
+            <li><strong>Data field validation:</strong>Email format check and password requirements</li>
+            <li><strong>Buttons/Hyperlinks/Dropdowns:</strong>"Submit" or "Sign Up" button, "Log in" and "Forgor password"</li>
+            <li><strong>Actions:</strong>registration stores user data in the database</li>
+            <li><strong>Special notes:</strong>Could be two separate pages (Register / Login) or combined. Keep forms user-friendly.</li>
+        </ol>
+        <p>|||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+
+        <ol>
+            <li><strong>Name:</strong>Hairdressers Dashboard</li>
+            <li><strong>Purpose:</strong>Provide tools for hairdressers to manage appointments, communicate with clients, and share notes/tips.</li>
+            <li><strong>Intended Users:</strong>Authenticated hairdressers.</li>
+            <li><strong>Content:</strong>List of upcoming appointments, messages from clients, tip-sharing feature.</li>
+            <li><strong>Data entry:</strong>Adding notes about appointments, sending tips/updates to clients.</li>
+            <li><strong>Data field validation:</strong>Basic text-field validation for messages (non-empty) or formatting.</li>
+            <li><strong>Buttons/Hyperlinks/Dropdowns:</strong>Message client, send tips/notes and view schedule</li>
+            <li><strong>Actions:</strong>Update appointment statuses, send out messages, share tips.</li>
+            <li><strong>Special notes:</strong>Could also allow hairdressers to adjust their availability times.</li>
+        </ol>
+        <p>|||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+
+        <ol>
+            <li><strong>Name:</strong>Client Dashboard</li>
+            <li><strong>Purpose:</strong>Central hub for parents to manage bookings, message hairdressers, and view tips/services.</li>
+            <li><strong>Intended Users:</strong>Logged-in parents/clients.</li>
+            <li><strong>Content:</strong>Upcoming appointments, messages, tips/resources, gallery links.</li>
+            <li><strong>Data entry:</strong>Possibly minimal (e.g., requesting appointment changes, sending messages).</li>
+            <li><strong>Data field validation:</strong>Basic check (appointment dates must be valid, messages cannot be empty, etc.).</li>
+            <li><strong>Buttons/Hyperlinks/Dropdowns:</strong>Cancel an Appointment, reschedule an appointment, services/tips, gallery/hairdressers, message hairdresser and view tips</li>
+            <li><strong>Actions:</strong>Cancels or reschedules existing appointments, allows direct communication with hairdressers</li>
+            <li><strong>Special notes:</strong>A clean layout ensures parents can quickly manage everything.</li>
+        </ol>
+        <p>|||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+
+        <ol>
+            <li><strong>Name:</strong>Cancel / Reschedule Appointments</li>
+            <li><strong>Purpose:</strong>Let clients manage existing appointments (cancel, reschedule) and view services or tips.</li>
+            <li><strong>Intended Users:</strong>Parents on the Client Dashboard.</li>
+            <li><strong>Content:</strong>Cancel, reschedule, services/tips and gallery/hairdressers</li>
+            <li><strong>Data entry:</strong>New date/time for rescheduling. Optional reason for cancellation.</li>
+            <li><strong>Data field validation:</strong>Check the new appointment time’s validity. Possibly require a reason for canceling.</li>
+            <li><strong>Buttons/Hyperlinks/Dropdowns:</strong>Cancel now, Select new time and save changes</li>
+            <li><strong>Actions:</strong>Database updates to reflect appointment changes</li>
+            <li><strong>Special notes:</strong>Possibly add confirmation pop-ups to avoid accidental cancellations.</li>
+        </ol>
+        <p>|||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+
+        <ol>
+            <li><strong>Name:</strong>Account Info</li>
+            <li><strong>Purpose:</strong>Display and let users (parents or hairdressers) edit personal details (email, password, child’s info, etc.).</li>
+            <li><strong>Intended Users:</strong>Logged-in clients (parents) or hairdressers.</li>
+            <li><strong>Content:</strong>Current account information (name, email, phone, child’s name, etc.).</li>
+            <li><strong>Data entry:</strong>Updated profile fields (contact info, passwords).</li>
+            <li><strong>Data field validation:</strong>password update rules and possible phone number formatting</li>
+            <li><strong>Buttons/Hyperlinks/Dropdowns:</strong>Save changes and cancel</li>
+            <li><strong>Actions:</strong>On “Save Changes,” updates the database with new info</li>
+            <li><strong>Special notes:</strong>Consider user prompts to confirm password changes or other sensitive updates.</li>
+        </ol>
+        <p>|||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+
+        <ol>
+            <li><strong>Name:</strong>Gallery</li>
+            <li><strong>Purpose:</strong>Display pictures of the hairdressers, their best work, and before-and-after transformations to showcase the salon’s creativity and atmosphere.</li>
+            <li><strong>Intended Users:</strong>Parents/Clients, potential new visitors, and anyone curious about the salon’s quality and style.</li>
+            <li><strong>Content:</strong>A curated collection of photos featuring the salon’s hairdressers, various completed haircuts, and fun, candid moments with happy kids.</li>
+            <li><strong>Data entry:</strong> None (this page is purely informational and visual).</li>
+            <li><strong>Data field validation:</strong>N/A</li>
+            <li><strong>Buttons/Hyperlinks/Dropdowns:</strong>Potential navigation tabs or filters to browse by hairdresser or type of haircut and Links to hairdresser profiles or “Meet the Team” pages</li>
+            <li><strong>Actions:</strong>Users can click on images to enlarge them, read brief descriptions, or open hairdresser profiles if desired.</li>
+            <li><strong>Special notes:</strong>High-quality images are essential to showcase work effectively, may include short captions or testimonials from parents and ensuring the gallery is mobile-responsive will make it user-friendly on all devices.</li>
+        </ol>
+        <p>|||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+
+        <ol>
+            <li><strong>Name:</strong>About</li>
+            <li><strong>Purpose:</strong> Introduce the salon, its mission, and unique “Cut & Play” approach for kids.</li>
+            <li><strong>Intended Users:</strong>All visitors (new or returning).</li>
+            <li><strong>Content:</strong>Brief company history, philosophy, why it’s kid-friendly, staff highlights.</li>
+            <li><strong>Data entry:</strong>None (purely informational).</li>
+            <li><strong>Data field validation:</strong>N/A</li>
+            <li><strong>Buttons/Hyperlinks/Dropdowns:</strong>Possibly a “Learn More” or “Contact Us” link.</li>
+            <li><strong>Actions:</strong>Users can navigate to other sections (Home, Registration, etc.).</li>
+            <li><strong>Special notes:</strong>Keep it concise and welcoming to give a quick, friendly overview.</li>
+        </ol>
+        <p>|||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+
+
+        <hr>
+        <h3>Dynamic Functionality</h3>
+        <p>
+            Multiple sections throughout the site will employ dynamic forms that streamline 
+            tasks like scheduling, rescheduling, and canceling appointments. For instance, 
+            dropdown menus may be configured to display only the appointments relevant to a 
+            particular client when posting session notes. A dedicated calendar interface will 
+            allow both parents and hairdressers to conveniently view their bookings at a 
+            glance; selecting a highlighted date can instantly display details such as the 
+            service type, appointment time, and assigned hairdresser. Certain actions, like 
+            finalizing invoices or updating appointment information, will also trigger 
+            automated emails containing client or booking details pulled directly from the 
+            site’s records. Powering all of this is a central database that continuously 
+            refreshes itself to keep session data, client profiles, and messages accurate 
+            in real time. Finally, the About section could feature interactive images or a 
+            short slideshow, inviting visitors to explore the salon’s upbeat, child-friendly 
+            atmosphere in a more immersive way.
+        </p>
+        <hr>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
+      <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

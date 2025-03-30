@@ -37,11 +37,17 @@ p {
     font-style: italic;
 }
 
-img {
-    
+/*img {
     width: 316px;
     height: 412px;
-}
+}*/
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    text-align: center;
+  }
 
 figure {
     text-align: center;
@@ -132,6 +138,11 @@ section p {
     text-align: left;
   }
   
+  .wireframe {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
   
   
 @media screen and (max-width: 600px) {
