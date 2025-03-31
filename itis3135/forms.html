@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Palen's Jolly Proud Bear</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <form action="#" method="post" class="website-form">
+            <!-- Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe" size="30"><br><br>
+          
+            <!-- Phone -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="123-456-7890" size="20"><br><br>
+          
+            <!-- Email -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com" size="30"><br><br>
+
+             <!-- Website Type (Checkboxes) -->
+             <fieldset>
+                <legend>What type of website do you need?</legend>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="websiteType" value="business"> Business</label>
+                  <label><input type="checkbox" name="websiteType" value="ecommerce"> E-Commerce</label>
+                  <label><input type="checkbox" name="websiteType" value="portfolio"> Portfolio</label>
+                  <label><input type="checkbox" name="websiteType" value="blog"> Blog</label>
+                </div>
+              </fieldset><br>
+              
+
+            <!-- Budget (Radio Buttons) -->
+            <fieldset>
+                <legend>What is your estimated budget?</legend>
+                <div class="radio-group">
+                <label><input type="radio" name="budget" value="less1000" required> Less than $1,000</label>
+                <label><input type="radio" name="budget" value="1kto5k"> $1,000 - $5,000</label>
+                <label><input type="radio" name="budget" value="5kplus"> More than $5,000</label>
+                </div>
+            </fieldset><br> 
+
+            <!-- Timeline (Dropdown) -->
+            <label for="timeline">When do you need the website completed?</label>
+            <select id="timeline" name="timeline" required>
+                <option value="">--Please select a timeline--</option>
+                <option value="2weeks">Within 2 weeks</option>
+                <option value="1month">Within 1 month</option>
+                <option value="flexible">Flexible</option>
+            </select><br>
+
+            <!-- Website URL (optional) -->
+            <label for="currentUrl">Do you already have a website? (If so, enter the URL)</label>
+            <input type="url" id="currentUrl" name="currentUrl" placeholder="https://example.com" size="40"><br><br>
+
+            <!-- Additional Notes -->
+            <label for="notes">Any descriptions or things you'd like to clarify?</label><br>
+            <textarea id="notes" name="notes" rows="5" cols="50" placeholder="Enter additional information here..."></textarea><br><br>
+
+                    
+            <!-- Buttons -->
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

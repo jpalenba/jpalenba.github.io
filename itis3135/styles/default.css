@@ -37,11 +37,6 @@ p {
     font-style: italic;
 }
 
-/*img {
-    width: 316px;
-    height: 412px;
-}*/
-
 img {
     width: auto;
     height: auto;
@@ -143,7 +138,91 @@ section p {
     margin: 0 auto;
     text-align: center;
   }
-  
+
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px; 
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #222;     
+  color: #fff;               
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;     
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+select {
+  border: 1px solid #ccc;        
+  padding: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;              
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.website-form {
+  background-color: #858080;       
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 40px auto;               
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  color: #ddee899e; 
+
+}
+
+
+
   
 @media screen and (max-width: 600px) {
     img {
