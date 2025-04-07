@@ -1,0 +1,358 @@
+/* #fffbf3 #8f7036 #b58d33 #dacba4 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dddbd7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.section-title {
+  color: #8A6F35;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  color: #b58d33;
+  margin-top: 30px;
+}
+
+
+.header, .footer {
+  width: 100%;
+  background-color: #8A6F35;
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.37;
+  box-sizing: border-box;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background-color: #8A6F35;
+  border-radius: 40px;
+  padding: 40px 20px;
+  min-height: 73.7vh;
+  margin: 40px 20px;
+  box-sizing: border-box;
+}
+
+.title-box {
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 20px 20px;
+  margin-bottom: 10vh;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.middle-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 80px;
+  flex-wrap: wrap;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.left-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.left-buttons button {
+  background-color: #FAF6E9;
+  color: #8A6F35;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.left-buttons button:hover {
+  background-color: #f1e4c6;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.right-logo {
+  background-color: #FAF6E9;
+  color: #8A6F35;
+  flex: 0.55;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 300px;
+  padding: 20px;
+  min-height: 300px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover,
+.header a:hover {
+  color: #dacba4;
+  transform: translateY(-2px);
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.separator {
+  color: white;
+  font-size: 25px;
+}
+
+.about-us, .contact-section, .location-section, .schedule-section, .cancel-section, .message-section, .services-section, .gallery-section {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 40px;
+  background-color: #fffbf3;
+  border-radius: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.about-us p,
+.contact-info p,
+.location-info p,
+.directions p,
+.directions li,
+.schedule-section p,
+.cancel-section p,
+.message-section p,
+.services-section p,
+.gallery-section p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about-us ul,
+.services ul,
+.tips ul {
+  list-style: disc inside;
+  padding-left: 0;
+}
+
+.about-us ul li,
+.services li,
+.tips li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.services li::before,
+.tips li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #8A6F35;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.contact-form form,
+.cancel-form,
+.message-form,
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.cancel-form input,
+.cancel-form select,
+.cancel-form textarea,
+.message-form input,
+.message-form select,
+.message-form textarea,
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.contact-form button,
+.cancel-form button,
+.message-form button,
+.appointment-form button {
+  background-color: #8A6F35;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover,
+.cancel-form button:hover,
+.message-form button:hover,
+.appointment-form button:hover {
+  background-color: #b58d33;
+}
+
+.action-button {
+  display: inline-block;
+  background-color: #FAF6E9;
+  color: #8A6F35;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: normal;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.action-button:hover {
+  background-color: #f1e4c6;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.gallery,
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.photo-card,
+.team-member {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.photo-placeholder {
+  background-color: #e0e0e0;
+  color: #555;
+  font-size: 14px;
+  padding: 60px 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.map-embed iframe {
+  margin-top: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #8A6F35; 
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #dacba4; 
+  transform: translateY(-2px);
+}
+
+.logo-image {
+  max-width: 66%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.centered-image {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.centered-image img {
+  max-width: 90%;
+  height: 90%;
+  border-radius: 20px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}

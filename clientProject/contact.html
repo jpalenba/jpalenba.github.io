@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut&Play | Contact</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Whether you have questions, feedback, or want to book a haircut — we're here to help.</p>
+          
+            <div class="contact-info">
+              <h2>Salon Information</h2>
+              <p><strong>Phone:</strong> (704) 555-1234</p>
+              <p><strong>Email:</strong> info@cutandplay.com</p>
+              <p><strong>Address:</strong> 123 Kiddie Cuts Lane, Denver, NC 28037</p>
+              <p><strong>Hours:</strong> Monday – Saturday: 9:00 AM – 6:00 PM<br>Sunday: Closed</p>
+            </div>
+          
+            <div class="contact-form">
+              <h2>Send Us a Message</h2>
+              <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required />
+          
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required />
+          
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+          
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+          </section>
+          
+    </main>
+    <footer class="footer">
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
+      <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

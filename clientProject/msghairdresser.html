@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut&Play | Home</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <section class="message-section">
+            <h1>Message Your Hairdresser</h1>
+            <p>Have a question, request, or just want to say hi? Send a direct message to one of our amazing hairdressers below!</p>
+          
+            <form class="message-form" action="#" method="post">
+              <label for="parent-name">Your Name:</label>
+              <input type="text" id="parent-name" name="parent-name" required>
+          
+              <label for="hairdresser">Select a Hairdresser:</label>
+              <select id="hairdresser" name="hairdresser" required>
+                <option value="">-- Choose a Hairdresser --</option>
+                <option value="ms-lily">Ms. Lily</option>
+                <option value="mr-ray">Mr. Ray</option>
+                <option value="ms-bella">Ms. Bella</option>
+                <option value="mr-omar">Mr. Omar</option>
+              </select>
+          
+              <label for="email">Your Email (optional):</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com">
+          
+              <label for="message">Your Message:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+          
+              <button type="submit">Send Message</button>
+            </form>
+          </section>
+          
+    </main>
+    <footer class="footer">
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
+      <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

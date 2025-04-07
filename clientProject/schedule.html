@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut&Play | Schedule</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <section class="schedule-section">
+            <h1>Schedule an Appointment</h1>
+            <p>Please fill out the form below to book a haircut for your child. We’ll send you a confirmation once it’s scheduled!</p>
+          
+            <form class="appointment-form" action="#" method="post">
+              <label for="parent-name">Parent's Name:</label>
+              <input type="text" id="parent-name" name="parent-name" required>
+          
+              <label for="child-name">Child's Name:</label>
+              <input type="text" id="child-name" name="child-name" required>
+          
+              <label for="date">Preferred Date:</label>
+              <input type="text" id="date" name="date" placeholder="MM/DD/YYYY" required>
+          
+              <label for="time">Preferred Time:</label>
+              <input type="text" id="time" name="time" placeholder="HH:MM" required>
+          
+              <label for="service">Service:</label>
+              <select id="service" name="service" required>
+                <option value="">-- Select a Service --</option>
+                <option value="regular">Regular Haircut</option>
+                <option value="fade">Kid’s Fade</option>
+                <option value="braids">Simple Braiding</option>
+                <option value="style">Wash & Style</option>
+              </select>
+          
+              <label for="hairdresser">Preferred Hairdresser (optional):</label>
+              <input type="text" id="hairdresser" name="hairdresser" placeholder="e.g., Ms. Lily, Mr. Ray">
+          
+              <label for="notes">Special Notes or Requests:</label>
+              <textarea id="notes" name="notes" rows="4"></textarea>
+          
+              <button type="submit">Book Appointment</button>
+            </form>
+          </section>
+    </main>
+    <footer class="footer">
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/survey.js"></script>
+</body>
+</html>

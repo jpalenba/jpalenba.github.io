@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut&Play | Cancel/Reschedule</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <section class="cancel-section">
+            <h1>Cancel or Reschedule Appointment</h1>
+            <p>Please enter the details of your appointment so we can help you modify or cancel it.</p>
+          
+            <form class="cancel-form" action="#" method="post">
+              <label for="parent-name">Parent's Name:</label>
+              <input type="text" id="parent-name" name="parent-name" required>
+          
+              <label for="child-name">Child's Name:</label>
+              <input type="text" id="child-name" name="child-name" required>
+          
+              <label for="original-date">Original Appointment Date:</label>
+              <input type="text" id="original-date" name="original-date" placeholder="MM/DD/YYYY" required>
+          
+              <label for="action-type">What would you like to do?</label>
+              <select id="action-type" name="action-type" required>
+                <option value="">-- Select an Option --</option>
+                <option value="reschedule">Reschedule Appointment</option>
+                <option value="cancel">Cancel Appointment</option>
+              </select>
+          
+              <div id="reschedule-fields" style="display: none;">
+                <label for="new-date">New Preferred Date:</label>
+                <input type="text" id="new-date" name="new-date" placeholder="MM/DD/YYYY">
+          
+                <label for="new-time">New Preferred Time:</label>
+                <input type="text" id="new-time" name="new-time" placeholder="HH:MM">
+              </div>
+          
+              <label for="notes">Additional Notes (optional):</label>
+              <textarea id="notes" name="notes" rows="4"></textarea>
+          
+              <button type="submit">Submit</button>
+            </form>
+          </section> 
+    </main>
+    <footer class="footer">
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
