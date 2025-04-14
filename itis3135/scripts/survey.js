@@ -110,3 +110,24 @@ function resetForm() {
     document.getElementById('resultContainer').style.display = "none";
     document.getElementById('formContainer').style.display = "block";
 }
+
+let slides = [];
+
+window.showSlide = function(index) {
+  slides.forEach(slide => slide.style.display = "none");
+  slides[index].style.display = "block";
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  slides = Array.from(document.querySelectorAll(".slide"));
+
+  slides.forEach(slide => slide.style.display = "none");
+
+  if (slides.length > 0) {
+    slides[0].style.display = "block";
+  }
+});
+
+
+
+

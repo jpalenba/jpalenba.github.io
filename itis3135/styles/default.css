@@ -221,6 +221,61 @@ select {
 
 }
 
+#slideshow-container {
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.caption {
+  font-size: 18px;
+  padding: 10px;
+  background: #898c7b; 
+  color: #4A4A48;       
+}
+
+.thumbnail-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.thumbnail-list img {
+  width: 100px;
+  height: 56px; 
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-sizing: border-box; 
+}
+
+
+.thumbnail-list img:hover {
+  border-color: #333;
+}
+
+.slide {
+  display: none;
+}
+
+
 
 
   
