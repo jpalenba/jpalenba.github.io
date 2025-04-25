@@ -275,6 +275,16 @@ select {
   display: none;
 }
 
+#canvas-container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* keep your width limits if you want, e.g.: */
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
 
 
 
