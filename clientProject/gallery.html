@@ -16,59 +16,103 @@
             <h1>Gallery & Meet Our Hairdressers</h1>
             <p>Take a look at some of our amazing work and get to know the talented team who make the magic happen at Cut&Play Salon!</p>
           
+            <h2 class ="section-title">Before &amp; After Gallery</h2>
             <div class="gallery">
-              <h2>Before & After Gallery</h2>
+              
               <div class="gallery">
                 <div class="photo-card">
-                  <div class="photo-placeholder">📸 A picture would be posted in the future</div>
-                  <p>Classic Kid’s Cut</p>
+                  <a href="images/classic-cut.png" class="lightbox">
+                    <img src="images/classic-cut-thumb.png"
+                         alt="Classic Cut kids' haircut" />
+                  </a>
+                  <p>
+                    Classic Cut
+                    <span class="ai-tag">AI-generated</span>
+                  </p>
                 </div>
                 <div class="photo-card">
-                  <div class="photo-placeholder">📸 A picture would be posted in the future</div>
-                  <p>Fun Braided Style</p>
+                  <a href="images/fun-braid.png" class="lightbox">
+                    <img src="images/fun-braid-thumb.png"
+                         alt="Fun Braid kids' haircut" />
+                  </a>
+                  <p>
+                    Fun Braid
+                  <span class="ai-tag">AI-generated</span>
+
+                  </p>
                 </div>
                 <div class="photo-card">
-                  <div class="photo-placeholder">📸 A picture would be posted in the future</div>
-                  <p>Cool Fade</p>
+                  <a href="images/cool-fade.png" class="lightbox">
+                    <img src="images/cool-fade-thumb.png"
+                         alt="Cool Fade kids' haircut" />
+                  </a>
+                  <p>
+                    Cool Fade
+                    <span class="ai-tag">AI-generated</span>
+                  </p>
                 </div>
+                </div>
+              </div>
+          
+            <h2 class="section-title">Meet the Hairdressers</h2>
+
+            <div class="team">
+              <!-- Ms. Lily -->
+              <div class="team-member">
+                <a href="images/ms.Lily.png" class="lightbox">
+                  <img src="images/ms.-Lily-thumb.png" alt="Ms. Lily portrait">
+                </a>
+                <h3>
+                  Ms. Lily
+                  <span class="ai-tag">AI-generated</span> 
+                </h3>
+                <p>Specializes in braiding and creating styles that keep kids smiling.</p>
+              </div>
+            
+              <!-- Mr. Ray -->
+              <div class="team-member">
+                <a href="images/mr.Ray.png" class="lightbox">
+                  <img src="images/mr.-Ray-thumb.png" alt="Mr. Ray portrait">
+                </a>
+                <h3>
+                  Mr. Ray
+                  <span class="ai-tag">AI-generated</span>
+                </h3>
+                <p>Known for sharp fades and making first haircuts feel fun and easy.</p>
+              </div>
+            
+              <!-- Ms. Bella -->
+              <div class="team-member">
+                <a href="images/ms-bella.png" class="lightbox">
+                  <img src="images/ms-bella-thumb.png" alt="Ms. Bella portrait">
+                </a>
+                <h3>
+                  Ms. Bella
+                  <span class="ai-tag">AI-generated</span>
+                </h3>
+                <p>Loves creating soft, stylish cuts and making every visit special.</p>
+              </div>
+            
+              <!-- Mr. Omar -->
+              <div class="team-member">
+                <a href="images/mr-omar.png" class="lightbox">
+                  <img src="images/mr-omar-thumb.png" alt="Mr. Omar portrait">
+                </a>
+                <h3>
+                  Mr. Omar
+                  <span class="ai-tag">AI-generated</span>
+                </h3>
+                <p>Brings creativity and calm to every haircut—especially great with first-time clients and special requests.</p>
               </div>
             </div>
-          
-            <div class="team">
-              <h2>Meet the Hairdressers</h2>
-              <div class="team">
-                <div class="team-member">
-                  <div class="photo-placeholder">👤 A picture would be posted in the future</div>
-                  <h3>Ms. Lily</h3>
-                  <p>Specializes in braiding and creating styles that keep kids smiling.</p>
-                </div>
-                <div class="team-member">
-                  <div class="photo-placeholder">👤 A picture would be posted in the future</div>
-                  <h3>Mr. Ray</h3>
-                  <p>Known for sharp fades and making first haircuts feel fun and easy.</p>
-                </div>
-                <div class="team-member">
-                  <div class="photo-placeholder">👤 A picture would be posted in the future</div>
-                  <h3>Ms. Bella</h3>
-                  <p>Loves creating soft, stylish cuts and making every visit special.</p>
-                </div>
-                <div class="team-member">
-                    <div class="photo-placeholder">👤 A picture would be posted in the future</div>
-                    <h3>Mr. Omar</h3>
-                    <p>Brings creativity and calm to every haircut — especially great with first-time clients and special requests.</p>
-                  </div>
-                </div>
-              </div>
         </section>
           
     </main>
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
-    <script>
-        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-      </script>
       <script src="scripts/HTMLInclude.min.js"></script>
+      <script src="scripts/validateLinks.js" defer></script>
+      <script src="scripts/lightbox.js" defer></script>
 </body>
 </html>

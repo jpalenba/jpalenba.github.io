@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut&Play | Home</title>
+    <title>Cut&Play | Services</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -29,12 +29,27 @@
           
             <div class="tips">
               <h2>Tips for Parents</h2>
-              <ul>
-                <li>📅 <strong>Book early:</strong> Choose a time when your child is usually happy and well-rested.</li>
-                <li>🎧 <strong>Bring comfort items:</strong> Toys, snacks, or headphones with music/videos can help ease nerves.</li>
-                <li>😊 <strong>Stay calm & encouraging:</strong> Your child will feel more confident if you're relaxed and positive.</li>
-                <li>💬 <strong>Talk through the process:</strong> Let your child know what to expect and that they can ask questions.</li>
-                <li>🧼 <strong>Clean hair helps:</strong> A quick wash before the appointment helps us give the best cut!</li>
+              <ul class="tips-list">
+                <li class="tip">
+                  <button class="tip-toggle">📅 Book early</button>
+                  <p class="tip-body">Choose a time when your child is usually happy and well‑rested.</p>
+                </li>
+                <li class="tip">
+                  <button class="tip-toggle">🎧 Bring comfort items</button>
+                  <p class="tip-body">Toys, snacks, or headphones with music/videos can help ease nerves.</p>
+                </li>
+                <li class="tip">
+                  <button class="tip-toggle">😊 Stay calm &amp; encouraging</button>
+                  <p class="tip-body">Your child will feel more confident if you’re relaxed and positive.</p>
+                </li>
+                <li class="tip">
+                  <button class="tip-toggle">💬 Talk through the process</button>
+                  <p class="tip-body">Let your child know what to expect and that they can ask questions.</p>
+                </li>
+                <li class="tip">
+                  <button class="tip-toggle">🧼 Clean hair helps</button>
+                  <p class="tip-body">A quick wash before the appointment helps us give the best cut!</p>
+                </li>
               </ul>
             </div>
           </section>
@@ -43,10 +58,9 @@
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
-    <script>
-        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-      </script>
       <script src="scripts/HTMLInclude.min.js"></script>
+      <script src="scripts/validateLinks.js" defer></script>
+      <script src="scripts/tipsAccordion.js" defer></script>
+
 </body>
 </html>

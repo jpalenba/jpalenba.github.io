@@ -178,7 +178,7 @@ body {
 .about-us ul,
 .services ul,
 .tips ul {
-  list-style: disc inside;
+  list-style: none;
   padding-left: 0;
 }
 
@@ -186,13 +186,13 @@ body {
 .services li,
 .tips li {
   margin-bottom: 10px;
-  padding-left: 20px;
+  padding-left: 24px;
   position: relative;
 }
 
 .services li::before,
 .tips li::before {
-  content: "•";
+  content: "";
   position: absolute;
   left: 0;
   color: #8A6F35;
@@ -356,3 +356,89 @@ body {
   border-radius: 20px; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
 }
+
+
+   .tips-list            { margin: 0; padding: 0; list-style: none; }
+   .tip                  { border-bottom: 1px solid #e5dcbc; }
+   .tip-toggle           {
+     background: none;
+     border: none;
+     width: 100%;
+     text-align: left;
+     padding: 14px 10px;
+     font-size: 17px;
+     font-weight: bold;
+     color: #8A6F35;
+     cursor: pointer;
+     transition: background 0.25s;
+     box-sizing: border-box; /* ← added this line */
+
+   }
+   .tip-toggle:hover     { background: #f1e4c6; }
+   .tip-body             {                /* hidden by default */
+     display: none;
+     padding: 12px 20px 18px 26px;
+     color: #333;
+     line-height: 1.55;
+   }
+
+.tip-body {
+  display: none;
+}
+
+.tips-list .active {
+  display: block;
+}
+
+  
+   
+   .lightbox-overlay    {                /* created by lightbox.js */
+     position: fixed; inset: 0;
+     background: rgba(0,0,0,0.75);
+     display: grid;
+     place-items: center;
+     z-index: 1000;
+   }
+   .lightbox-overlay img {
+     max-width: 90vw;
+     max-height: 85vh;
+     border-radius: 12px;
+     box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+   }
+   .lightbox-overlay::after {              
+     content: "×";
+     position: absolute; top: 18px; right: 28px;
+     font-size: 34px;
+     color: #FAF6E9;
+     cursor: pointer;
+   }
+   
+   
+   #char-counter {
+     display: block;
+     margin-top: -6px;
+     margin-bottom: 6px;
+     font-size: 13px;
+     color: #8A6F35;
+     text-align: right;
+   }
+
+   .photo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .ai-tag {
+    font-size: 0.65rem;   /* ≈10 px on default root size */
+    color: #777;
+    display: block;       /* forces it onto its own line */
+    margin-top: 2px;
+  }
+
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }

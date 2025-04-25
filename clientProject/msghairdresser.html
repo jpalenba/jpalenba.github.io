@@ -34,7 +34,8 @@
           
               <label for="message">Your Message:</label>
               <textarea id="message" name="message" rows="5" required></textarea>
-          
+              <small id="char-counter">0/500</small>
+
               <button type="submit">Send Message</button>
             </form>
           </section>
@@ -43,10 +44,8 @@
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
-    <script>
-        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-      </script>
       <script src="scripts/HTMLInclude.min.js"></script>
+      <script src="scripts/validateLinks.js" defer></script>
+      <script src="scripts/charCount.js" defer></script>
 </body>
 </html>
