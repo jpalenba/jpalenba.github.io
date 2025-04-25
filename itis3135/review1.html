@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peer Review – Steven Yang Portfolio</title>
+  <link rel="stylesheet" href="styles/default.css" />
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+
+  <main class="peer-review">
+    <h2 class="page-title">Peer Review 1</h2>
+
+    <section class="review-section">
+      <h3 class="reviewee">Angela Yang</h3>
+
+      <figure class="review-img">
+        <img src="images/review1.png" alt="Screenshot of Steven Yang’s homepage">
+        <figcaption class="subtitle">
+          Homepage of Steven’s personal portfolio site –
+          <a href="https://jinyayuu.github.io/stevenyang.co/" target="_blank"
+             >jinyayuu.github.io/stevenyang.co</a>
+        </figcaption>
+      </figure>
+
+      <h4 class="section-title">General</h4>
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th class="result-col">Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Submission loads directly to primary page with all links working</td>
+            <td class="check">✅</td>
+          </tr>
+          <tr>
+            <td>No spaces / uppercase letters in any file / folder / image names</td>
+            <td class="check">✅</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 class="section-title">Design</h4>
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Criterion</th>
+            <th class="result-col">Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sufficient contrast / readable font sizes</td>
+            <td class="check">✅</td>
+          </tr>
+          <tr>
+            <td>Site colors &amp; fonts handled by external&nbsp;.css file</td>
+            <td class="check">✅</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 class="section-title">CRAP Principles</h4>
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Principle</th>
+            <th class="result-col">Result</th>
+            <th class="comment-col">Comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Contrast</td>
+            <td class="check">✅</td>
+            <td>White hero text on blurred cityscape is readable; dark body text on white cards also clear.</td>
+          </tr>
+          <tr>
+            <td>Repetition</td>
+            <td class="check">✅</td>
+            <td>Consistent rounded-card motif, typefaces, and nav styling across hero &amp; “Hey There!” card.</td>
+          </tr>
+          <tr>
+            <td>Alignment</td>
+            <td class="check">✅</td>
+            <td>Brand + nav aligned on a single row; hero text centered; body content left-aligned inside card.</td>
+          </tr>
+          <tr>
+            <td>Proximity</td>
+            <td class="check">⛔</td>
+            <td>Lots of whitespace on the far sides. Try narrowing <code>max-width</code> or adding side padding.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 class="section-title">Semantic Structure Checklist</h4>
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th class="result-col">Present</th>
+            <th class="comment-col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;header&gt;</td>
+            <td class="check">✅</td>
+            <td>Contains brand label <em>StevenYang.Co</em>.</td>
+          </tr>
+          <tr>
+            <td>&lt;nav&gt;</td>
+            <td class="check">✅</td>
+            <td>Home · About · Experience · Apps · Contact.</td>
+          </tr>
+          <tr>
+            <td>&lt;main&gt;</td>
+            <td class="check">✅</td>
+            <td>Begins with hero section followed by “Hey There!” intro.</td>
+          </tr>
+          <tr>
+            <td>&lt;footer&gt;</td>
+            <td class="check">✅</td>
+            <td>Contains brand label and who made the page</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 class="section-title">Other Thoughts &amp; Suggestions</h4>
+      <ul class="suggestions">
+        <li><strong>Whitespace balance —</strong> try <code>max-width: 1000px</code> or larger side padding.</li>
+        <li><strong>Accessibility —</strong> add descriptive <code>alt</code> text to the circular portrait.</li>
+        <li><strong>Interactive flair —</strong> subtle scroll-reveal on the “Hey There!” card.</li>
+        <li><strong>Footer —</strong> include quick nav links or social icons.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script>
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+  </script>
+  <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

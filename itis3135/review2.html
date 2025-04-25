@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Palen's Jolly Proud Bear</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main class="peer-review">
+        <h2 class="page-title">Peer Review 2</h2>
+    
+        <section class="review-section">
+          <h3 class="reviewee">Jayden Vargas</h3>
+    
+          <figure class="review-img">
+            <!-- Replace with the actual screenshot filename -->
+            <img src="images/review2.png"
+                 alt="Screenshot of Clifford Favors’ homepage">
+            <figcaption class="subtitle">
+              Homepage of Clifford Favors’ consulting site –
+              <a href="https://webpages.charlotte.edu/jvarga21/itis3135/project/index.html" target="_blank">
+                (live demo link)
+              </a>
+            </figcaption>
+          </figure>
+    
+          <!-- — GENERAL — -->
+          <h4 class="section-title">General</h4>
+          <table class="review-table">
+            <thead>
+              <tr><th>Item</th><th class="result-col">Result</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Submission opens directly to the primary page with working links</td>
+                <td class="check">✅</td>
+              </tr>
+              <tr>
+                <td>No spaces or uppercase chars in any file / folder names</td>
+                <td class="check">✅</td>
+              </tr>
+            </tbody>
+          </table>
+    
+          <!-- — DESIGN — -->
+          <h4 class="section-title">Design</h4>
+          <table class="review-table">
+            <thead>
+              <tr><th>Criterion</th><th class="result-col">Result</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sufficient contrast &amp; readable font sizes</td>
+                <td class="check">⚠️</td>
+              </tr>
+              <tr>
+                <td>Colors &amp; fonts controlled by a single external CSS file</td>
+                <td class="check">✅</td>
+              </tr>
+            </tbody>
+          </table>
+    
+          <!-- — CRAP — -->
+          <h4 class="section-title">CRAP Principles</h4>
+          <table class="review-table">
+            <thead>
+              <tr>
+                <th>Principle</th>
+                <th class="result-col">Result</th>
+                <th class="comment-col">Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Contrast</td>
+                <td class="check">⚠️</td>
+                <td>Light-blue text on light-blue background inside sidebar is a bit hard to read.</td>
+              </tr>
+              <tr>
+                <td>Repetition</td>
+                <td class="check">✅</td>
+                <td>Consistent header/nav styling across the site.</td>
+              </tr>
+              <tr>
+                <td>Alignment</td>
+                <td class="check">✅</td>
+                <td>Main copy, nav bar, and sidebar line up cleanly on a grid.</td>
+              </tr>
+              <tr>
+                <td>Proximity</td>
+                <td class="check">⛔</td>
+                <td>Huge vertical gap between logo and welcome text; compress to keep related items together.</td>
+              </tr>
+            </tbody>
+          </table>
+    
+          <!-- — SEMANTIC STRUCTURE — -->
+          <h4 class="section-title">Semantic Structure Checklist</h4>
+          <table class="review-table">
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th class="result-col">Present</th>
+                <th class="comment-col">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>&lt;header&gt;</td><td class="check">✅</td><td>Brand name &amp; navigation bar.</td></tr>
+              <tr><td>&lt;nav&gt;</td><td class="check">✅</td><td>Six-item navigation present.</td></tr>
+              <tr><td>&lt;main&gt;</td><td class="check">✅</td><td>Holds hero area &amp; intro copy.</td></tr>
+              <tr><td>&lt;aside&gt;</td><td class="check">✅</td><td>Sidebar “Industry Insights”.</td></tr>
+              <tr><td>&lt;footer&gt;</td><td class="check">✅</td><td>Copyright line.</td></tr>
+            </tbody>
+          </table>
+    
+          <!-- — OTHER THOUGHTS — -->
+          <h4 class="section-title">Other Thoughts &amp; Suggestions</h4>
+          <ul class="suggestions">
+            <li><strong>Contrast boost —</strong> darken the sidebar text or lighten its background for better legibility.</li>
+            <li><strong>Spacing —</strong> reduce the blank vertical space between the Lockton logo and welcome headline.</li>
+            <li><strong>Mobile layout —</strong> consider stacking the sidebar below main content on screens &lt; 768 px.</li>
+            <li><strong>Hero image alt text —</strong> add descriptive <code>alt</code> (e.g., “Lockton corporate logo”).</li>
+          </ul>
+        </section>
+      </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
+      <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
