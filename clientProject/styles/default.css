@@ -525,3 +525,15 @@ body {
 .reschedule-hidden {
   display: none;
 }
+
+/* footer copyright line — keep links white like the text */
+.site-credit a:link,
+.site-credit a:visited {
+  color: white;          /* or use `inherit` if you later change the text colour */
+  text-decoration: none; /* optional: remove underline */
+}
+
+.site-credit a:hover,
+.site-credit a:focus {
+  text-decoration: underline;   /* optional hover effect */
+}
