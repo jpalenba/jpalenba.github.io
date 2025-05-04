@@ -1,26 +1,27 @@
 /**
- * lightbox.js
- * -----------
- * Vanilla-JS lightbox: click <a class="lightbox"> to open;
- * click overlay, × or press Esc to close.
+ * scripts/lightbox.js
+ * (drop straight in – no other code changed)
  */
 (function () {
   const ESC = "Escape";
-  let overlay;                           
+  let overlay;         
+  let escHandler;       
 
+  /* 1 ─── close helper ──────────────────────────────── */
   function closeLightbox() {
     overlay.remove();
     document.body.style.overflow = "";
-    document.removeEventListener("keydown", escHandler);
+    document.removeEventListener("keydown", escHandler); 
   }
 
-  function escHandler(e) {
+  /* 2 ─── Esc-key helper ───────────────────────────── */
+  escHandler = function (e) {           // assignment happens *after* the let
     if (e.key === ESC) closeLightbox();
-  }
+  };
 
-  /* Open the overlay with the full-size image */
+  /* 3 ─── open overlay ─────────────────────────────── */
   const openLightbox = (src) => {
-    if (document.querySelector(".lightbox-overlay")) return;
+    if (document.querySelector(".lightbox-overlay")) return; 
 
     overlay = document.createElement("div");
     overlay.className = "lightbox-overlay";
@@ -41,7 +42,7 @@
     overlay.focus();
   };
 
-  /* Attach once DOM is ready */
+  /* 4 ─── wire up thumbnails once DOM is ready ─────── */
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("a.lightbox").forEach((link) => {
       link.addEventListener("click", (e) => {
