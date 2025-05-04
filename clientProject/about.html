@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Required meta tags for proper rendering & responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut&Play | About us</title>
+
+    <!-- Descriptive, SEO-friendly title -->
+    <title>Cut & Play | About Us</title>
+
+    <!-- Global stylesheet (typography, layout, colors) -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!-- Lint-page badges (optional accessibility / validator helper) -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <!-- ──────────────  Site Header (logo + nav)  ────────────── -->
     <header class="header">
+        <!-- HTMLInclude will pull in reusable header markup at runtime -->
         <div data-include="components/header.html"></div>
     </header>
+
+    <!-- ──────────────  Main Content  ────────────── -->
     <main>
+        <!-- ABOUT section gives visitors background on the salon -->
         <section class="about-us">
             <h1>About Us – Cut & Play Salon</h1>
-          
+
+            <!-- Salon philosophy / intro -->
             <p>
-              At <strong>Cut & Play Salon</strong>, we believe that a child's haircut should be more than just a trim — it should be a
-              <em>fun, friendly, and comforting experience</em> for both kids and their parents.
+              At <strong>Cut & Play Salon</strong>, we believe a child's haircut should be more than just a trim —
+              it should be a <em>fun, friendly, and comforting experience</em> for both kids and their parents.
             </p>
-          
+
             <p>
-              Our website is designed to offer a <strong>smooth, stress-free experience</strong> for families looking to book a haircut with ease.
-              Whether you're a new visitor or a returning parent, our goal is to make every part of your visit — from scheduling to styling — as enjoyable as possible.
+              Our site is built to provide a <strong>smooth, stress-free experience</strong> for families booking a haircut.
+              Whether you’re new or returning, our aim is to make everything — from scheduling to styling —
+              as enjoyable as possible.
             </p>
-          
+
+            <!-- What we offer – bullet list for quick scanning -->
             <h2>What We Offer:</h2>
             <ul>
-              <li><strong>Simple Appointment Booking:</strong> Easily schedule, reschedule, or cancel appointments at your convenience using our clearly labeled buttons.</li>
-              <li><strong>Direct Messaging:</strong> Send a message directly to one of our friendly hairdressers for any style requests or questions.</li>
-              <li><strong>Helpful Tips for Parents:</strong> Get advice to prepare your child for a stress-free, happy haircut.</li>
-              <li><strong>Photo Gallery & Introductions:</strong> Explore our before-and-after gallery and meet our talented hairdressers with fun bios and photos.</li>
+              <li><strong>Simple Appointment Booking:</strong> Schedule, reschedule, or cancel with clearly labeled buttons.</li>
+              <li><strong>Direct Messaging:</strong> Send questions or style requests straight to a friendly hairdresser.</li>
+              <li><strong>Helpful Tips for Parents:</strong> Advice to prep your child for a happy haircut.</li>
+              <li><strong>Photo Gallery & Introductions:</strong> Browse before-and-after shots and meet the stylists.</li>
             </ul>
-          
+
+            <!-- Mission statement -->
             <h2>Our Mission:</h2>
             <p>
-              We’re here to <strong>make haircut day something to look forward to</strong>. By combining playful design, skilled professionals, and a warm atmosphere,
+              We’re here to <strong>make haircut day something to look forward to</strong>.
+              By combining playful design, skilled professionals, and a warm atmosphere,
               we create a space where kids feel safe and parents feel supported.
             </p>
-          
+
             <hr>
-          
+
+            <!-- Static client/project info block (useful for portfolio grading) -->
             <h2>Client Information</h2>
             <p><strong>Client Name:</strong> Shaneli Bencosme</p>
             <p><strong>Business Name:</strong> Cut & Play Salon</p>
             <p><strong>Industry:</strong> Children’s Hair Salon</p>
-          </section>
+        </section>
 
-          <div class="centered-image">
+        <!-- Decorative/branding photo centred on the page -->
+        <div class="centered-image">
             <img src="images/image1.png" alt="Cut & Play Salon Interior">
-          </div>
-          
+        </div>
     </main>
+
+    <!-- ──────────────  Site Footer  ────────────── -->
     <footer class="footer">
+        <!-- Pulls in reusable footer markup (contact links, social, etc.) -->
         <div data-include="components/footer.html"></div>
     </footer>
-      <script src="scripts/HTMLInclude.min.js"></script>
-      <script src="scripts/validateLinks.js" defer></script>
+
+    <!-- ──────────────  Scripts  ────────────── -->
+    <!-- html-include polyfill (loads header/footer placeholders above) -->
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <!-- Adds “Validate this page” links when viewed locally -->
+    <script src="scripts/validateLinks.js" defer></script>
 </body>
 </html>

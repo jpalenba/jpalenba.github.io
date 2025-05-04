@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ───── Meta & Title ───── -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut&Play | Services</title>
+
+    <title>Cut & Play | Services</title>
+
+    <!-- Site-wide stylesheet -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!-- Optional Lint.page badge (markup / a11y validator) -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <!-- Decorative image floating on each side of the viewport -->
+  <img class="animation animation--left"  src="images/peine.png" alt="" aria-hidden="true">
+
+    <!-- ───── Header (logo + nav) ───── -->
     <header class="header">
+        <!-- Reusable header markup injected at runtime -->
         <div data-include="components/header.html"></div>
     </header>
+
+    <!-- ───── Main Content ───── -->
     <main>
         <section class="services-section">
-            <h1>Services & Tips for Parents</h1>
-            <p>At Cut&Play Salon, we’re here to make your child’s haircut easy, fun, and worry-free. Below you’ll find a list of services we offer and a few helpful tips for parents!</p>
-          
+            <h1>Services &amp; Tips for Parents</h1>
+            <p>
+              At Cut &amp; Play Salon, we’re here to make your child’s haircut easy, fun,
+              and worry-free. Below you’ll find the services we offer and a few helpful tips!
+            </p>
+
+            <!-- ========== Services List ========== -->
             <div class="services">
               <h2>Our Services</h2>
               <ul>
                 <li><strong>Regular Haircut:</strong> A clean, classic cut tailored to your child’s style.</li>
                 <li><strong>Kid’s Fade:</strong> Cool, trendy fades done gently with clippers.</li>
                 <li><strong>Simple Braiding:</strong> Neat and playful braids for any occasion.</li>
-                <li><strong>Wash & Style:</strong> Gentle shampoo and styling with fun finish touches.</li>
+                <li><strong>Wash &amp; Style:</strong> Gentle shampoo and styling with fun finishing touches.</li>
                 <li><strong>First Haircut Package:</strong> Includes certificate, lock of hair, and a photo!</li>
               </ul>
             </div>
-          
+
+            <!-- ========== Accordion Tips ========== -->
+            <!-- tipsAccordion.js attaches click listeners to .tip-toggle buttons
+                 and toggles the visibility of the sibling .tip-body paragraph. -->
             <div class="tips">
               <h2>Tips for Parents</h2>
               <ul class="tips-list">
+                <!-- One <li class="tip"> per tip -->
                 <li class="tip">
-                  <button class="tip-toggle">📅 Book early</button>
-                  <p class="tip-body">Choose a time when your child is usually happy and well‑rested.</p>
+                  <button class="tip-toggle">📅 Book early</button>
+                  <p class="tip-body">Choose a time when your child is usually happy and well-rested.</p>
                 </li>
                 <li class="tip">
-                  <button class="tip-toggle">🎧 Bring comfort items</button>
+                  <button class="tip-toggle">🎧 Bring comfort items</button>
                   <p class="tip-body">Toys, snacks, or headphones with music/videos can help ease nerves.</p>
                 </li>
                 <li class="tip">
-                  <button class="tip-toggle">😊 Stay calm &amp; encouraging</button>
+                  <button class="tip-toggle">😊 Stay calm &amp; encouraging</button>
                   <p class="tip-body">Your child will feel more confident if you’re relaxed and positive.</p>
                 </li>
                 <li class="tip">
-                  <button class="tip-toggle">💬 Talk through the process</button>
+                  <button class="tip-toggle">💬 Talk through the process</button>
                   <p class="tip-body">Let your child know what to expect and that they can ask questions.</p>
                 </li>
                 <li class="tip">
-                  <button class="tip-toggle">🧼 Clean hair helps</button>
+                  <button class="tip-toggle">🧼 Clean hair helps</button>
                   <p class="tip-body">A quick wash before the appointment helps us give the best cut!</p>
                 </li>
               </ul>
             </div>
-          </section>
-          
+        </section>
     </main>
+
+    <!-- ───── Footer ───── -->
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
-      <script src="scripts/HTMLInclude.min.js"></script>
-      <script src="scripts/validateLinks.js" defer></script>
-      <script src="scripts/tipsAccordion.js" defer></script>
 
+    <!-- ───── Scripts ───── -->
+    <!-- html-include polyfill for header/footer injection -->
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+    <!-- Adds W3C validator links during local development -->
+    <script src="scripts/validateLinks.js" defer></script>
+
+    <!-- Accordion behaviour for tips list -->
+    <script src="scripts/tipsAccordion.js" defer></script>
 </body>
 </html>

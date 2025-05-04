@@ -1,118 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ───── Meta & Title ───── -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut&Play | Gallery</title>
+
+    <title>Cut & Play | Gallery</title>
+
+    <!-- Global styles -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!-- Optional Lint.page badge (accessibility / validator helper) -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <!-- ───── Header (logo + nav) ───── -->
     <header class="header">
+        <!-- Header markup injected at runtime -->
         <div data-include="components/header.html"></div>
     </header>
+
+    <!-- ───── Main Content ───── -->
     <main>
         <section class="gallery-section">
-            <h1>Gallery & Meet Our Hairdressers</h1>
-            <p>Take a look at some of our amazing work and get to know the talented team who make the magic happen at Cut&Play Salon!</p>
-          
-            <h2 class ="section-title">Before &amp; After Gallery</h2>
-            <div class="gallery">
-              
-              <div class="gallery">
-                <div class="photo-card">
-                  <a href="images/classic-cut.png" class="lightbox">
-                    <img src="images/classic-cut-thumb.png"
-                         alt="Classic Cut kids' haircut" />
-                  </a>
-                  <p>
-                    Classic Cut
-                    <span class="ai-tag">AI-generated</span>
-                  </p>
-                </div>
-                <div class="photo-card">
-                  <a href="images/fun-braid.png" class="lightbox">
-                    <img src="images/fun-braid-thumb.png"
-                         alt="Fun Braid kids' haircut" />
-                  </a>
-                  <p>
-                    Fun Braid
-                  <span class="ai-tag">AI-generated</span>
+            <h1>Gallery &amp; Meet Our Hairdressers</h1>
+            <p>
+              Take a look at some of our amazing work and get to know the talented team
+              who make the magic happen at Cut &amp; Play Salon!
+            </p>
 
-                  </p>
-                </div>
-                <div class="photo-card">
-                  <a href="images/cool-fade.png" class="lightbox">
-                    <img src="images/cool-fade-thumb.png"
-                         alt="Cool Fade kids' haircut" />
-                  </a>
-                  <p>
-                    Cool Fade
-                    <span class="ai-tag">AI-generated</span>
-                  </p>
-                </div>
-                </div>
+            <!-- ========== Before & After Gallery ========== -->
+            <h2 class="section-title">Before &amp; After Gallery</h2>
+            <div class="gallery">
+              <!-- Each .photo-card links the thumbnail to the full image via
+                   class="lightbox" (handled by scripts/lightbox.js). -->
+              <div class="photo-card">
+                <a href="images/classic-cut.png" class="lightbox">
+                  <img src="images/classic-cut-thumb.png"
+                       alt="Classic Cut kids' haircut">
+                </a>
+                <p>
+                  Classic Cut
+                  <span class="ai-tag">AI-generated</span>
+                </p>
               </div>
-          
+
+              <div class="photo-card">
+                <a href="images/fun-braid.png" class="lightbox">
+                  <img src="images/fun-braid-thumb.png"
+                       alt="Fun Braid kids' haircut">
+                </a>
+                <p>
+                  Fun Braid
+                  <span class="ai-tag">AI-generated</span>
+                </p>
+              </div>
+
+              <div class="photo-card">
+                <a href="images/cool-fade.png" class="lightbox">
+                  <img src="images/cool-fade-thumb.png"
+                       alt="Cool Fade kids' haircut">
+                </a>
+                <p>
+                  Cool Fade
+                  <span class="ai-tag">AI-generated</span>
+                </p>
+              </div>
+            </div><!-- /.gallery -->
+
+            <!-- ========== Meet the Hairdressers ========== -->
             <h2 class="section-title">Meet the Hairdressers</h2>
 
             <div class="team">
-              <!-- Ms. Lily -->
+              <!-- One .team-member per stylist -->
               <div class="team-member">
                 <a href="images/ms.Lily.png" class="lightbox">
                   <img src="images/ms.-Lily-thumb.png" alt="Ms. Lily portrait">
                 </a>
-                <h3>
-                  Ms. Lily
-                  <span class="ai-tag">AI-generated</span> 
-                </h3>
+                <h3>Ms. Lily <span class="ai-tag">AI-generated</span></h3>
                 <p>Specializes in braiding and creating styles that keep kids smiling.</p>
               </div>
-            
-              <!-- Mr. Ray -->
+
               <div class="team-member">
                 <a href="images/mr.Ray.png" class="lightbox">
                   <img src="images/mr.-Ray-thumb.png" alt="Mr. Ray portrait">
                 </a>
-                <h3>
-                  Mr. Ray
-                  <span class="ai-tag">AI-generated</span>
-                </h3>
+                <h3>Mr. Ray <span class="ai-tag">AI-generated</span></h3>
                 <p>Known for sharp fades and making first haircuts feel fun and easy.</p>
               </div>
-            
-              <!-- Ms. Bella -->
+
               <div class="team-member">
                 <a href="images/ms-bella.png" class="lightbox">
                   <img src="images/ms-bella-thumb.png" alt="Ms. Bella portrait">
                 </a>
-                <h3>
-                  Ms. Bella
-                  <span class="ai-tag">AI-generated</span>
-                </h3>
+                <h3>Ms. Bella <span class="ai-tag">AI-generated</span></h3>
                 <p>Loves creating soft, stylish cuts and making every visit special.</p>
               </div>
-            
-              <!-- Mr. Omar -->
+
               <div class="team-member">
                 <a href="images/mr-omar.png" class="lightbox">
                   <img src="images/mr-omar-thumb.png" alt="Mr. Omar portrait">
                 </a>
-                <h3>
-                  Mr. Omar
-                  <span class="ai-tag">AI-generated</span>
-                </h3>
-                <p>Brings creativity and calm to every haircut—especially great with first-time clients and special requests.</p>
+                <h3>Mr. Omar <span class="ai-tag">AI-generated</span></h3>
+                <p>
+                  Brings creativity and calm to every haircut — especially great with
+                  first-time clients and special requests.
+                </p>
               </div>
-            </div>
+            </div><!-- /.team -->
         </section>
-          
     </main>
+
+    <!-- ───── Footer ───── -->
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
-      <script src="scripts/HTMLInclude.min.js"></script>
-      <script src="scripts/validateLinks.js" defer></script>
-      <script src="scripts/lightbox.js" defer></script>
+
+    <!-- ───── Scripts ───── -->
+    <!-- Inject header/footer fragments -->
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+    <!-- Adds “Validate this page” links during development -->
+    <script src="scripts/validateLinks.js" defer></script>
+
+    <!-- Lightbox functionality for all <a class="lightbox"> links -->
+    <script src="scripts/lightbox.js" defer></script>
 </body>
 </html>

@@ -1,34 +1,36 @@
-/* #fffbf3 #8f7036 #b58d33 #dacba4 */
+/* ---------- Global reset & layout ---------- */
 html, body {
+  /* let flexbox stretch the <body> full-height */
   height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;      /* border-box everywhere */
 }
 
 body {
-  background-color: #dddbd7;
-  display: flex;
+  background-color: #dddbd7;   /* neutral page backdrop */
+  display: flex;               /* footer sticks to bottom */
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* ---------- Generic section titles ---------- */
 .section-title {
-  color: #8A6F35;
+  color: #8A6F35;              /* brand brown */
   font-size: 32px;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .section-subtitle {
-  color: #b58d33;
+  color: #b58d33;              /* golden accent */
   margin-top: 30px;
 }
 
-
+/* ---------- Sticky header & footer bar ---------- */
 .header, .footer {
   width: 100%;
-  background-color: #8A6F35;
+  background-color: #8A6F35;   /* brand brown */
   color: white;
   text-align: center;
   padding: 12px 20px;
@@ -38,8 +40,9 @@ body {
   box-sizing: border-box;
 }
 
+/* ---------- Home-page hero block ---------- */
 .content {
-  flex: 1;
+  flex: 1;                     /* grow to push footer */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +54,7 @@ body {
   background-color: #8A6F35;
   border-radius: 40px;
   padding: 40px 20px;
-  min-height: 73.7vh;
+  min-height: 73.7vh;          /* fills most viewport */
   margin: 40px 20px;
   box-sizing: border-box;
 }
@@ -71,11 +74,12 @@ body {
   justify-content: space-between;
   width: 100%;
   gap: 80px;
-  flex-wrap: wrap;
+  flex-wrap: wrap;             /* mobile-friendly */
   padding: 0 40px;
   box-sizing: border-box;
 }
 
+/* ---------- Call-to-action buttons & logo panel ---------- */
 .left-buttons {
   display: flex;
   flex-direction: column;
@@ -86,7 +90,7 @@ body {
 
 .left-buttons button {
   background-color: #FAF6E9;
-  color: #8A6F35;
+  color:  #8A6F35;;
   border: none;
   padding: 15px;
   font-size: 16px;
@@ -111,7 +115,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  border-radius: 300px;
+  border-radius: 300px;         /* big circle */
   padding: 20px;
   min-height: 300px;
   text-align: center;
@@ -119,6 +123,7 @@ body {
   box-sizing: border-box;
 }
 
+/* ---------- Top nav bar ---------- */
 .nav-links {
   display: flex;
   justify-content: center;
@@ -134,7 +139,7 @@ body {
 
 .nav-links a:hover,
 .header a:hover {
-  color: #dacba4;
+  color: #dacba4;              /* light-cream hover */
   transform: translateY(-2px);
 }
 
@@ -144,22 +149,31 @@ body {
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.separator {
+.separator {                  /* “|” bullet in nav */
   color: white;
   font-size: 25px;
 }
 
-.about-us, .contact-section, .location-section, .schedule-section, .cancel-section, .message-section, .services-section, .gallery-section {
+/* ---------- Card-style content wrappers ---------- */
+.about-us,
+.contact-section,
+.location-section,
+.schedule-section,
+.cancel-section,
+.message-section,
+.services-section,
+.gallery-section {
   max-width: 1000px;
   margin: 10px auto;
   padding: 40px;
-  background-color: #fffbf3;
+  background-color: #fffbf3;   /* cream background */
   border-radius: 20px;
   font-family: Arial, sans-serif;
   color: #333;
   box-sizing: border-box;
 }
 
+/* Paragraph layout inside content cards */
 .about-us p,
 .contact-info p,
 .location-info p,
@@ -175,6 +189,7 @@ body {
   text-align: center;
 }
 
+/* ---------- Unstyled ul lists (services, tips) ---------- */
 .about-us ul,
 .services ul,
 .tips ul {
@@ -186,12 +201,13 @@ body {
 .services li,
 .tips li {
   margin-bottom: 10px;
-  padding-left: 24px;
+  padding-left: 24px;          /* room for pseudo-bullet */
   position: relative;
 }
 
 .services li::before,
 .tips li::before {
+  /* reserved for custom icon; currently blank */
   content: "";
   position: absolute;
   left: 0;
@@ -200,6 +216,7 @@ body {
   line-height: 1;
 }
 
+/* ---------- Generic form layout ---------- */
 .contact-form form,
 .cancel-form,
 .message-form,
@@ -227,6 +244,16 @@ body {
   box-sizing: border-box;
 }
 
+.message-form textarea{
+  height: 167px;
+}
+
+.cancel-form textarea{
+  height: 106px;
+}
+
+
+/* Submit buttons */
 .contact-form button,
 .cancel-form button,
 .message-form button,
@@ -245,13 +272,14 @@ body {
 .cancel-form button:hover,
 .message-form button:hover,
 .appointment-form button:hover {
-  background-color: #b58d33;
+  background-color: #8a6c2b;   /* gold hover */
 }
 
+/* ---------- Reusable CTA anchor (used on home page) ---------- */
 .action-button {
   display: inline-block;
   background-color: #FAF6E9;
-  color: #8A6F35;
+  color: #876D35;
   text-decoration: none;
   padding: 15px;
   font-size: 16px;
@@ -272,6 +300,7 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
+/* ---------- Gallery & team member grid ---------- */
 .gallery,
 .team {
   display: flex;
@@ -279,7 +308,6 @@ body {
   gap: 20px;
   justify-content: center;
 }
-
 
 .photo-card,
 .team-member {
@@ -293,6 +321,7 @@ body {
   box-sizing: border-box;
 }
 
+/* Placeholder rectangle (if real image missing) */
 .photo-placeholder {
   background-color: #e0e0e0;
   color: #555;
@@ -303,12 +332,14 @@ body {
   box-sizing: border-box;
 }
 
+/* ---------- Google-map iframe wrapper ---------- */
 .map-embed iframe {
   margin-top: 20px;
   border-radius: 12px;
   box-sizing: border-box;
 }
 
+/* ---------- Alternate nav bar (index header include) ---------- */
 .navbar {
   background-color: #8A6F35; 
   padding: 12px 20px;
@@ -338,7 +369,8 @@ body {
   transform: translateY(-2px);
 }
 
-.logo-image {
+/* ---------- Utility images ---------- */
+.logo-image {                 /* circle logo (home page) */
   max-width: 66%;
   max-height: 100%;
   object-fit: contain;
@@ -357,88 +389,139 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
 }
 
+/* ---------- Accordion tips (Services page) ---------- */
+.tips-list { 
+  margin: 0; padding: 0; list-style: none; 
+}
 
-   .tips-list            { margin: 0; padding: 0; list-style: none; }
-   .tip                  { border-bottom: 1px solid #e5dcbc; }
-   .tip-toggle           {
-     background: none;
-     border: none;
-     width: 100%;
-     text-align: left;
-     padding: 14px 10px;
-     font-size: 17px;
-     font-weight: bold;
-     color: #8A6F35;
-     cursor: pointer;
-     transition: background 0.25s;
-     box-sizing: border-box; /* ← added this line */
+.tip { 
+  border-bottom: 1px solid #e5dcbc; 
+}
 
-   }
-   .tip-toggle:hover     { background: #f1e4c6; }
-   .tip-body             {                /* hidden by default */
-     display: none;
-     padding: 12px 20px 18px 26px;
-     color: #333;
-     line-height: 1.55;
-   }
+.tip-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 14px 10px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #8A6F35;
+  cursor: pointer;
+  transition: background 0.25s;
+  box-sizing: border-box; /* keeps padding inside width */
+}
 
-.tip-body {
+.tip-toggle:hover { 
+  background: #f1e4c6; 
+}
+
+.tip-body {            /* hidden by default; shown via JS */
+  display: none;
+  padding: 12px 20px 18px 26px;
+  color: #333;
+  line-height: 1.55;
+}
+.tips-list .active { 
+  display: block; 
+}
+
+/* ---------- Lightbox overlay (gallery) ---------- */
+.lightbox-overlay {      /* node dynamically injected by lightbox.js */
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+.lightbox-overlay::after { /* “×” close glyph */
+  content: "×";
+  position: absolute; top: 18px; right: 28px;
+  font-size: 34px;
+  color: #FAF6E9;
+  cursor: pointer;
+}
+
+/* ---------- Character counter (Message page) ---------- */
+#char-counter {
+  display: block;
+  margin-top: -6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #8A6F35;
+  text-align: right;
+}
+
+/* ---------- Image helpers ---------- */
+.photo-card img { 
+  width: 100%; height: auto; border-radius: 8px; 
+}
+
+.ai-tag {                /* small “AI-generated” label */
+  font-size: 0.95rem;    
+  color: #4d4d4d;
+  display: block;
+  margin-top: 2px;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Validator badge strip (footer) ------------------------- */
+.validators { 
+  margin-top: 12px; text-align: center; 
+}
+
+.validators img { 
+  height: 31px; border: 0; vertical-align: middle; 
+}
+
+.validators a:hover img { 
+  filter: brightness(1.1); 
+}
+
+
+@keyframes scissors-bob {
+  0%, 100% { transform: translateY( 0); }
+  50%      { transform: translateY(-270px); }  
+}
+
+/* Bob the opposite way: starts lower, rises, returns */
+@keyframes scissors-bob-up {
+  0%,100% { transform: translateY(0);  }   
+  50%     { transform: translateY(350px); } 
+}
+
+.animation {
+  position: fixed;
+  top: 40%;                  
+  width: 250px;               
+  height: auto;
+  z-index: 900;              
+  animation: scissors-bob 4s ease-in-out infinite;
+  pointer-events: none;    
+}
+
+/* Side placement */
+.animation--left  { left: 10px; }
+
+/* Side placement + mirrored graphic + opposite animation */
+.animation--right { right: 10px; transform: scaleX(-1); }
+
+.site-credit { 
+  margin-top:12px; font-size:.9rem; 
+}
+
+.reschedule-hidden {
   display: none;
 }
-
-.tips-list .active {
-  display: block;
-}
-
-  
-   
-   .lightbox-overlay    {                /* created by lightbox.js */
-     position: fixed; inset: 0;
-     background: rgba(0,0,0,0.75);
-     display: grid;
-     place-items: center;
-     z-index: 1000;
-   }
-   .lightbox-overlay img {
-     max-width: 90vw;
-     max-height: 85vh;
-     border-radius: 12px;
-     box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-   }
-   .lightbox-overlay::after {              
-     content: "×";
-     position: absolute; top: 18px; right: 28px;
-     font-size: 34px;
-     color: #FAF6E9;
-     cursor: pointer;
-   }
-   
-   
-   #char-counter {
-     display: block;
-     margin-top: -6px;
-     margin-bottom: 6px;
-     font-size: 13px;
-     color: #8A6F35;
-     text-align: right;
-   }
-
-   .photo-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  .ai-tag {
-    font-size: 0.65rem;   /* ≈10 px on default root size */
-    color: #777;
-    display: block;       /* forces it onto its own line */
-    margin-top: 2px;
-  }
-
-  .team-member img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-  }

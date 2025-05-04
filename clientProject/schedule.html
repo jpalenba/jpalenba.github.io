@@ -1,59 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ───── Meta & Title ───── -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut&Play | Schedule</title>
+
+    <title>Cut & Play | Schedule</title>
+
+    <!-- Global stylesheet -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!-- Optional Lint.page validator badge -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <!-- Decorative image floating on each side of the viewport -->
+  <img src="images/brush.png" class="animation animation--right" alt="" aria-hidden="true">
+
+    <!-- ───── Header (logo + nav) ───── -->
     <header class="header">
+        <!-- Injects reusable header markup at runtime -->
         <div data-include="components/header.html"></div>
     </header>
+
+    <!-- ───── Main Content ───── -->
     <main>
         <section class="schedule-section">
             <h1>Schedule an Appointment</h1>
-            <p>Please fill out the form below to book a haircut for your child. We’ll send you a confirmation once it’s scheduled!</p>
-          
+            <p>
+              Please fill out the form below to book a haircut for your child.
+              We’ll send you a confirmation once it’s scheduled!
+            </p>
+
+            <!-- ==========  Appointment Form  ========== -->
+            <!-- `survey.js` handles only the polyfill & helper functions now. -->
             <form class="appointment-form" action="#" method="post">
+              <!-- Parent & child names -->
               <label for="parent-name">Parent's Name:</label>
               <input type="text" id="parent-name" name="parent-name" required>
-          
+
               <label for="child-name">Child's Name:</label>
               <input type="text" id="child-name" name="child-name" required>
-          
+
+              <!-- Date / Time — type=text so polyfillDateTime can swap to
+                   native date/time controls where supported -->
               <label for="date">Preferred Date:</label>
-              <input type="text" id="date" name="date" placeholder="MM/DD/YYYY" required>
-          
+              <input type="text" id="date" name="date"
+                     placeholder="MM/DD/YYYY" required>
+
               <label for="time">Preferred Time:</label>
-              <input type="text" id="time" name="time" placeholder="HH:MM" required>
-          
+              <input type="text" id="time" name="time"
+                     placeholder="HH:MM" required>
+
+              <!-- Service selector -->
               <label for="service">Service:</label>
               <select id="service" name="service" required>
                 <option value="">-- Select a Service --</option>
                 <option value="regular">Regular Haircut</option>
                 <option value="fade">Kid’s Fade</option>
                 <option value="braids">Simple Braiding</option>
-                <option value="style">Wash & Style</option>
+                <option value="style">Wash &amp; Style</option>
               </select>
-          
+
+              <!-- Optional preferred stylist -->
               <label for="hairdresser">Preferred Hairdresser (optional):</label>
-              <input type="text" id="hairdresser" name="hairdresser" placeholder="e.g., Ms. Lily, Mr. Ray">
-          
+              <input type="text" id="hairdresser" name="hairdresser"
+                     placeholder="e.g., Ms. Lily, Mr. Ray">
+
+              <!-- Special instructions -->
               <label for="notes">Special Notes or Requests:</label>
               <textarea id="notes" name="notes" rows="4"></textarea>
-          
+
+              <!-- Submit -->
               <button type="submit">Book Appointment</button>
             </form>
-          </section>
+        </section>
     </main>
+
+    <!-- ───── Footer ───── -->
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
+
+    <!-- ───── Scripts ───── -->
+    <!-- html-include polyfill for header/footer injection -->
     <script src="scripts/HTMLInclude.min.js"></script>
+
+    <!-- survey.js currently provides only date/time polyfill helpers -->
     <script src="scripts/survey.js"></script>
+
+    <!-- Adds W3C validator links during local development -->
     <script src="scripts/validateLinks.js" defer></script>
+
+    <!-- Converts unsupported <input type="date|time"> to text w/ placeholders -->
     <script src="scripts/polyfillDateTime.js" defer></script>
 </body>
 </html>

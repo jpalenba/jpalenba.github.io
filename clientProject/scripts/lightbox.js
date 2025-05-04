@@ -1,39 +1,48 @@
 /**
  * lightbox.js
  * -----------
- * Vanilla-JS lightbox: clicking any <a class="lightbox">
- * opens the linked image full-screen; click × or ESC to close.
+ * Vanilla-JS lightbox: click <a class="lightbox"> to open;
+ * click overlay, × or press Esc to close.
  */
-
 (function () {
-  const ESC = 27;
+  const ESC = "Escape";
 
   /* Open the overlay with the full-size image */
   const openLightbox = (src) => {
+    if (document.querySelector(".lightbox-overlay")) return;
+
     const overlay = document.createElement("div");
     overlay.className = "lightbox-overlay";
+    /* Accessible dialog semantics */
+    overlay.tabIndex = -1;
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
 
-    const img = document.createElement("img");
+    const img = new Image();
     img.src = src;
+    img.alt = ""; 
     overlay.appendChild(img);
 
-    /* Close on click or on ESC key-press */
-    const close = () => overlay.remove();
+    /* Close helper shared by click & Esc */
+    const close = () => {
+      overlay.remove();
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", escHandler);
+    };
 
     overlay.addEventListener("click", close);
 
     const escHandler = (e) => {
-      if (e.keyCode === ESC) {
-        close();
-        document.removeEventListener("keydown", escHandler);
-      }
+      if (e.key === ESC) close();
     };
     document.addEventListener("keydown", escHandler);
 
+    document.body.style.overflow = "hidden";
     document.body.appendChild(overlay);
+    overlay.focus(); 
   };
 
-  /* Attach lightbox behavior to every <a class="lightbox"> */
+  /* Attach once DOM is ready */
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("a.lightbox").forEach((link) => {
       link.addEventListener("click", (e) => {

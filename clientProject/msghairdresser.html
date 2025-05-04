@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ───── Meta & Title ───── -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut&Play | Home</title>
+
+    <!-- Browser-tab / SEO title (adjust if desired) -->
+    <title>Cut&Play | Message a hairdresser</title>
+
+    <!-- Site-wide stylesheet -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!-- Optional Lint.page validator badge -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <!-- Decorative image floating on each side of the viewport -->
+  <img src="images/lion.png" class="animation animation--right" alt="" aria-hidden="true">
+
+    <!-- ───── Header (logo + nav) ───── -->
     <header class="header">
+        <!-- Reusable header markup injected at runtime -->
         <div data-include="components/header.html"></div>
     </header>
+
+    <!-- ───── Main Content ───── -->
     <main>
         <section class="message-section">
             <h1>Message Your Hairdresser</h1>
-            <p>Have a question, request, or just want to say hi? Send a direct message to one of our amazing hairdressers below!</p>
-          
+            <p>
+              Have a question, request, or just want to say hi?
+              Send a direct message to one of our amazing hairdressers below!
+            </p>
+
+            <!-- =================  Message Form  ================= -->
+            <!-- charCount.js listens to #message and updates #char-counter -->
             <form class="message-form" action="#" method="post">
+              <!-- Sender name -->
               <label for="parent-name">Your Name:</label>
               <input type="text" id="parent-name" name="parent-name" required>
-          
+
+              <!-- Stylist selector -->
               <label for="hairdresser">Select a Hairdresser:</label>
               <select id="hairdresser" name="hairdresser" required>
                 <option value="">-- Choose a Hairdresser --</option>
@@ -28,24 +50,35 @@
                 <option value="ms-bella">Ms. Bella</option>
                 <option value="mr-omar">Mr. Omar</option>
               </select>
-          
+
+              <!-- Optional reply-to email -->
               <label for="email">Your Email (optional):</label>
               <input type="email" id="email" name="email" placeholder="you@example.com">
-          
+
+              <!-- Message body -->
               <label for="message">Your Message:</label>
               <textarea id="message" name="message" rows="5" required></textarea>
               <small id="char-counter">0/500</small>
 
+              <!-- Submit -->
               <button type="submit">Send Message</button>
             </form>
-          </section>
-          
+        </section>
     </main>
+
+    <!-- ───── Footer ───── -->
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
-      <script src="scripts/HTMLInclude.min.js"></script>
-      <script src="scripts/validateLinks.js" defer></script>
-      <script src="scripts/charCount.js" defer></script>
+
+    <!-- ───── Scripts ───── -->
+    <!-- Inject header/footer fragments -->
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+    <!-- Adds W3C validator links (if validateLinks.js is present locally) -->
+    <script src="scripts/validateLinks.js" defer></script>
+
+    <!-- Live character counter for the message textarea -->
+    <script src="scripts/charCount.js" defer></script>
 </body>
 </html>

@@ -1,29 +1,19 @@
-/**
- * survey.js  (Cut & Play Salon)
- * ---------------------------------------------
- * Purpose:
- *   1.  Show/Hide the “new date / new time” fields when the
- *       parent picks “Reschedule” on cancel-reschedule.html.
- *   2.  Provide graceful fallbacks for <input type="date|time">
- *       on browsers that don’t support those controls.
- *   3.  Hide the main navigation bar when the page is the home
- *       page (index.html).
- */
-
 // ─────────────── 1  Reschedule: toggle new date/time fields
-  document.addEventListener("DOMContentLoaded", function () {
-    const actionType = document.getElementById("action-type");
-    const rescheduleFields = document.getElementById("reschedule-fields");
-  
-    actionType.addEventListener("change", function () {
-      if (this.value === "reschedule") {
-        rescheduleFields.style.display = "block";
-      } else {
-        rescheduleFields.style.display = "none";
-      }
-    });
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const actionType       = document.getElementById("action-type");
+  const rescheduleFields = document.getElementById("reschedule-fields");
+  const hiddenClass      = "reschedule-hidden";
 
+  actionType.addEventListener("change", function () {
+    if (this.value === "reschedule") {
+      rescheduleFields.classList.remove(hiddenClass);
+    } else {
+      rescheduleFields.classList.add(hiddenClass);
+    }
+  });
+});
+
+/*
 // ─────────────── 2  Polyfill <input type="date|time"> if unsupported
   document.addEventListener('DOMContentLoaded', function () {
     function isInputTypeSupported(type) {
@@ -47,25 +37,4 @@
         input.placeholder = 'HH:MM';
       });
     }
-  });
-
-// ─────────────── 3  Hide navbar only on home page
-  window.addEventListener("DOMContentLoaded", () => {
-    const checkNav = () => {
-      const nav = document.getElementById("main-nav");
-      const isHomePage =
-        location.pathname.endsWith("index.html") ||
-        location.pathname === "/" ||
-        location.pathname === "";
-  
-      if (nav && isHomePage) {
-        nav.style.display = "none";
-      } else if (!nav) {
-       
-        setTimeout(checkNav, 1); 
-      }
-    };
-  
-    checkNav();
-  });
-  
+  });*/

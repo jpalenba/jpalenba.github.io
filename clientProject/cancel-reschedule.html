@@ -1,59 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ───── Meta & Title ───── -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut&Play | Cancel/Reschedule</title>
+
+    <!-- SEO-friendly page title -->
+    <title>Cut & Play | Cancel / Reschedule</title>
+
+    <!-- Global site stylesheet -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!-- Lint.page accessibility / validator badge (optional) -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <!-- Decorative image floating on each side of the viewport -->
+  <img class="animation animation--left"  src="images/blower.png" alt="" aria-hidden="true">
+  
+    <!-- ───── Site Header (logo + nav) ───── -->
     <header class="header">
+        <!-- Injects reusable nav markup at runtime -->
         <div data-include="components/header.html"></div>
     </header>
+
+    <!-- ───── Main Content ───── -->
     <main>
         <section class="cancel-section">
             <h1>Cancel or Reschedule Appointment</h1>
             <p>Please enter the details of your appointment so we can help you modify or cancel it.</p>
-          
+
+            <!--  Cancel / Reschedule form.
+                  survey.js listens for #action-type changes and toggles #reschedule-fields. -->
             <form class="cancel-form" action="#" method="post">
+              <!-- Parent / Child identifiers -->
               <label for="parent-name">Parent's Name:</label>
               <input type="text" id="parent-name" name="parent-name" required>
-          
+
               <label for="child-name">Child's Name:</label>
               <input type="text" id="child-name" name="child-name" required>
-          
+
+              <!-- Original appointment info -->
               <label for="original-date">Original Appointment Date:</label>
-              <input type="text" id="original-date" name="original-date" placeholder="MM/DD/YYYY" required>
-          
+              <input type="text" id="original-date" name="original-date"
+                     placeholder="MM/DD/YYYY" required>
+
+              <!-- Choose action: reschedule or cancel -->
               <label for="action-type">What would you like to do?</label>
               <select id="action-type" name="action-type" required>
                 <option value="">-- Select an Option --</option>
                 <option value="reschedule">Reschedule Appointment</option>
                 <option value="cancel">Cancel Appointment</option>
               </select>
-          
-              <div id="reschedule-fields" style="display: none;">
+
+              <!-- Reschedule-only fields (hidden by default, revealed via JS) -->
+              <div id="reschedule-fields" class="reschedule-hidden">
                 <label for="new-date">New Preferred Date:</label>
                 <input type="text" id="new-date" name="new-date" placeholder="MM/DD/YYYY">
-          
+
                 <label for="new-time">New Preferred Time:</label>
                 <input type="text" id="new-time" name="new-time" placeholder="HH:MM">
               </div>
-          
+
+              <!-- Optional notes -->
               <label for="notes">Additional Notes (optional):</label>
               <textarea id="notes" name="notes" rows="4"></textarea>
-          
+
+              <!-- Submit the request -->
               <button type="submit">Submit</button>
             </form>
-          </section> 
+        </section>
     </main>
+
+    <!-- ───── Footer ───── -->
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
+
+    <!-- ───── Scripts ───── -->
+    <!-- Loads header/footer HTML fragments -->
     <script src="scripts/HTMLInclude.min.js"></script>
+
+    <!-- survey.js: toggles reschedule fields & polyfills date/time if needed -->
     <script src="scripts/survey.js"></script>
+
+    <!-- Adds W3C validator links for local development -->
     <script src="scripts/validateLinks.js" defer></script>
+
+    <!-- Extra polyfill for <input type="date|time"> on older browsers -->
     <script src="scripts/polyfillDateTime.js" defer></script>
 </body>
 </html>

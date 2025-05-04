@@ -1,40 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ───── Meta & Title ───── -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut&Play | Home</title>
+
+    <!-- Descriptive page title for SEO / browser tab -->
+    <title>Cut & Play | Home</title>
+
+    <!-- Global stylesheet (layout, typography, colors) -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!-- Optional Lint.page badge to validate accessibility & markup -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <!-- Decorative image floating on each side of the viewport -->
+  <img class="animation animation--left"  src="images/scissors.png" alt="" aria-hidden="true">
+
+    <!-- ───── Site Header (logo + navigation bar) ───── -->
     <header class="header">
+        <!-- Reusable header markup (logo H1 + <nav>) injected at runtime -->
         <div data-include="components/header.html"></div>
     </header>
+
+    <!-- ───── Main Content ───── -->
     <main>
         <div class="content">
             <div class="main-container">
-              <h2 class="title-box">Cut & Play Salon – Fun Kids’ Haircuts in Denver, NC</h2>
+              <!-- Headline / slogan -->
+              <h2 class="title-box">
+                Cut &amp; Play Salon – Fun Kids’ Haircuts in Denver, NC
+              </h2>
+
               <div class="middle-content">
+                <!-- ===== Left column with action buttons ===== -->
                 <div class="left-buttons">
-                  <a href="schedule.html" class="action-button">Schedule an appointment</a>
-                  <a href="cancel-reschedule.html" class="action-button">Reschedule/Cancel an appointment</a>
-                  <a href="msghairdresser.html" class="action-button">Message a hairdresser</a>
-                  <a href="services.html" class="action-button">Services/Tips for parents</a>
-                  <a href="gallery.html" class="action-button">Gallery/Hairdresser</a>
+                  <!-- Each .action-button links to a dedicated page -->
+                  <a href="schedule.html"          class="action-button">Schedule an appointment</a>
+                  <a href="cancel-reschedule.html" class="action-button">Reschedule / Cancel an appointment</a>
+                  <a href="msghairdresser.html"    class="action-button">Message a hairdresser</a>
+                  <a href="services.html"          class="action-button">Services / Tips for parents</a>
+                  <a href="gallery.html"           class="action-button">Gallery / Hairdressers</a>
                 </div>
+
+                <!-- ===== Right column with logo image ===== -->
                 <div class="right-logo">
-                  <img src="images/cutplay.png" alt="Cut&Play Logo" class="logo-image">
+                  <img src="images/cutplay.png"
+                       alt="Cut & Play Salon Logo"
+                       class="logo-image">
                 </div>
-              </div>
-            </div>
-          </div>
+              </div><!-- /.middle-content -->
+            </div><!-- /.main-container -->
+        </div><!-- /.content -->
     </main>
+
+    <!-- ───── Footer ───── -->
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
-      <script src="scripts/HTMLInclude.min.js"></script>
-      <script src="scripts/survey.js"></script>
-      <script src="scripts/validateLinks.js" defer></script>
+
+    <!-- ───── Scripts ───── -->
+    <!-- Inject header/footer HTML fragments -->
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+    <!-- Adds “Validate this page” links during local development -->
+    <script src="scripts/validateLinks.js" defer></script>
 </body>
 </html>

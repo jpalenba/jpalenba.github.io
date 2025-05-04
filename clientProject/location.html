@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ───── Meta & Title ───── -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut&Play | Location</title>
+
+    <!-- Browser-tab / SEO title -->
+    <title>Cut & Play | Location</title>
+
+    <!-- Site-wide styles -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!-- Optional Lint.page badge (markup / a11y validator) -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <!-- ───── Header (logo + nav bar) ───── -->
     <header class="header">
+        <!-- Injects reusable header markup at runtime -->
         <div data-include="components/header.html"></div>
     </header>
+
+    <!-- ───── Main Content ───── -->
     <main>
         <section class="location-section">
+            <!-- Page heading -->
             <h1>Find Us</h1>
-            <p>Cut & Play Salon is conveniently located in the heart of Denver, North Carolina. Whether you're coming from the city or a nearby town, we’re easy to reach!</p>
-          
+            <p>
+              Cut &amp; Play Salon is conveniently located in the heart of Denver, North Carolina.
+              Whether you're coming from the city or a nearby town, we’re easy to reach!
+            </p>
+
+            <!-- Salon address block -->
             <div class="location-info">
               <h2>Our Address</h2>
-              <p><strong>Cut & Play Salon</strong></p>
+              <p><strong>Cut &amp; Play Salon</strong></p>
               <p>123 Kiddie Cuts Lane</p>
-              <p>Denver, NC 28037</p>
+              <p>Denver, NC&nbsp;28037</p>
               <p><strong>Phone:</strong> (704) 555-1234</p>
             </div>
-          
+
+            <!-- Driving directions from nearby cities -->
             <div class="directions">
               <h2>Directions</h2>
               <ul>
-                <li><strong>From Charlotte, NC (via NC-16 N):</strong> Take NC-16 N for about 25 minutes. Turn right onto Optimist Club Rd, then left on Kiddie Cuts Lane. The salon is on your right!</li>
-                <li><strong>From Lincolnton, NC:</strong> Head southeast on NC-150 E for around 15 minutes. Turn right onto NC-16 Business, then left on Kiddie Cuts Lane. We’re just ahead!</li>
-                <li><strong>From Huntersville, NC:</strong> Take NC-73 W to NC-16 N. Follow for 10 minutes, then turn onto Optimist Club Rd and head to Kiddie Cuts Lane.</li>
+                <li>
+                  <strong>From Charlotte, NC (via&nbsp;NC-16 N):</strong>
+                  Take NC-16 N for about 25&nbsp;minutes. Turn right onto Optimist Club Rd,
+                  then left on Kiddie Cuts Lane. The salon is on your right!
+                </li>
+                <li>
+                  <strong>From Lincolnton, NC:</strong>
+                  Head southeast on NC-150 E for around 15&nbsp;minutes.
+                  Turn right onto NC-16 Business, then left on Kiddie Cuts Lane. We’re just ahead!
+                </li>
+                <li>
+                  <strong>From Huntersville, NC:</strong>
+                  Take NC-73 W to NC-16 N. Follow for 10&nbsp;minutes,
+                  then turn onto Optimist Club Rd and head to Kiddie Cuts Lane.
+                </li>
               </ul>
-              <p>Look for our bright, colorful sign and a kid-friendly storefront! Parking is free and available right out front.</p>
+              <p>
+                Look for our bright, colorful sign and a kid-friendly storefront!
+                Parking is free and available right out front.
+              </p>
             </div>
-          
+
+            <!-- Embedded Google Map for quick visual reference -->
             <div class="map-embed">
               <h2>Map</h2>
               <iframe
                 width="800"
                 height="350"
-                style="border: 0; align-content: center;"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.3688402515273!2d-81.01697178477972!3d35.53141628023439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856a417ffb6cf2f%3A0x123abc456def7890!2sDenver%2C%20NC!5e0!3m2!1sen!2sus!4v1712345678901"                
-                allowfullscreen></iframe>
+                style="border:0; display:block; margin:0 auto;"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.3688402515273!2d-81.01697178477972!3d35.53141628023439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856a417ffb6cf2f%3A0x123abc456def7890!2sDenver%2C%20NC!5e0!3m2!1sen!2sus!4v1712345678901"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
             </div>
-          </section>
-           
+        </section>
     </main>
+
+    <!-- ───── Footer ───── -->
     <footer class="footer">
         <div data-include="components/footer.html"></div>
     </footer>
-      <script src="scripts/HTMLInclude.min.js"></script>
-      <script src="scripts/validateLinks.js" defer></script>
+
+    <!-- ───── Scripts ───── -->
+    <!-- html-include polyfill for header/footer injection -->
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+    <!-- Adds “Validate this page” links for local development -->
+    <script src="scripts/validateLinks.js" defer></script>
 </body>
 </html>

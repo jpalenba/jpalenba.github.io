@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
       counter.textContent = `${textarea.value.length}/500`;
     };
     textarea.addEventListener("input", update);
-    update();                       // initialise
+    update();                       
   });
   
