@@ -6,40 +6,39 @@
  */
 (function () {
   const ESC = "Escape";
+  let overlay;                           
+
+  function closeLightbox() {
+    overlay.remove();
+    document.body.style.overflow = "";
+    document.removeEventListener("keydown", escHandler);
+  }
+
+  function escHandler(e) {
+    if (e.key === ESC) closeLightbox();
+  }
 
   /* Open the overlay with the full-size image */
   const openLightbox = (src) => {
     if (document.querySelector(".lightbox-overlay")) return;
 
-    const overlay = document.createElement("div");
+    overlay = document.createElement("div");
     overlay.className = "lightbox-overlay";
-    /* Accessible dialog semantics */
     overlay.tabIndex = -1;
     overlay.setAttribute("role", "dialog");
     overlay.setAttribute("aria-modal", "true");
 
     const img = new Image();
     img.src = src;
-    img.alt = ""; 
+    img.alt = "";
     overlay.appendChild(img);
 
-    /* Close helper shared by click & Esc */
-    const close = () => {
-      overlay.remove();
-      document.body.style.overflow = "";
-      document.removeEventListener("keydown", escHandler);
-    };
-
-    overlay.addEventListener("click", close);
-
-    const escHandler = (e) => {
-      if (e.key === ESC) close();
-    };
+    overlay.addEventListener("click", closeLightbox);
     document.addEventListener("keydown", escHandler);
 
     document.body.style.overflow = "hidden";
     document.body.appendChild(overlay);
-    overlay.focus(); 
+    overlay.focus();
   };
 
   /* Attach once DOM is ready */
